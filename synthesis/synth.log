@@ -1,0 +1,819 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version Q-2019.12-SP3 for linux64 - Apr 21, 2020 
+
+                    Copyright (c) 1988 - 2020 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+echo "********** CS552 Reading files begin ********************"
+********** CS552 Reading files begin ********************
+set my_verilog_files [list alu.v aluop.v cla16.v cla4.v control_unit.v decode.v dff.v dff_en.v dff_pre.v dff_pre_en.v execute.v fetch.v forwarding_unit.v hdu.v memory2c.syn.v memory.v proc.v register.v rf.v rf_bypass.v shifter.v write.v   ]
+alu.v aluop.v cla16.v cla4.v control_unit.v decode.v dff.v dff_en.v dff_pre.v dff_pre_en.v execute.v fetch.v forwarding_unit.v hdu.v memory2c.syn.v memory.v proc.v register.v rf.v rf_bypass.v shifter.v write.v
+set my_toplevel proc
+proc
+define_design_lib WORK -path ./WORK
+1
+analyze -f verilog $my_verilog_files
+Running PRESTO HDLC
+Compiling source file ./alu.v
+Warning:  ./alu.v:132: the undeclared symbol 'gteZ' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./alu.v:133: the undeclared symbol 'ltZ' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file ./aluop.v
+Compiling source file ./cla16.v
+Compiling source file ./cla4.v
+Compiling source file ./control_unit.v
+Compiling source file ./decode.v
+Compiling source file ./dff.v
+Warning:  ./dff.v:15: delays for continuous assignment are ignored. (VER-173)
+Compiling source file ./dff_en.v
+Warning:  ./dff_en.v:16: delays for continuous assignment are ignored. (VER-173)
+Compiling source file ./dff_pre.v
+Warning:  ./dff_pre.v:15: delays for continuous assignment are ignored. (VER-173)
+Compiling source file ./dff_pre_en.v
+Warning:  ./dff_pre_en.v:16: delays for continuous assignment are ignored. (VER-173)
+Compiling source file ./execute.v
+Warning:  ./execute.v:41: the undeclared symbol 'ALU_zero' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file ./fetch.v
+Compiling source file ./forwarding_unit.v
+Compiling source file ./hdu.v
+Compiling source file ./memory2c.syn.v
+Compiling source file ./memory.v
+Warning:  ./memory2c.syn.v:61: The statements in initial blocks are ignored. (VER-281)
+Compiling source file ./proc.v
+Warning:  ./proc.v:128: the undeclared symbol 'em_jmp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./proc.v:129: the undeclared symbol 'em_brnch' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file ./register.v
+Compiling source file ./rf.v
+Compiling source file ./rf_bypass.v
+Compiling source file ./shifter.v
+Compiling source file ./write.v
+Presto compilation completed successfully.
+Loading db file '/u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db'
+1
+elaborate $my_toplevel -architecture verilog
+Loading db file '/s/synopsys-2020_06_08/@sys/syn/Q-2019.12-SP3/libraries/syn/gtech.db'
+Loading db file '/s/synopsys-2020_06_08/@sys/syn/Q-2019.12-SP3/libraries/syn/standard.sldb'
+  Loading link library 'gscl45nm'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (proc)
+Elaborated 1 design.
+Current design is now 'proc'.
+Information: Building the design 'fetch'. (HDL-193)
+Presto compilation completed successfully. (fetch)
+Information: Building the design 'dff_en'. (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_en line 18 in file
+		'./dff_en.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (dff_en)
+Information: Building the design 'dff_pre_en'. (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_pre_en line 18 in file
+		'./dff_pre_en.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (dff_pre_en)
+Information: Building the design 'decode'. (HDL-193)
+Presto compilation completed successfully. (decode)
+Information: Building the design 'dff'. (HDL-193)
+
+Inferred memory devices in process
+	in routine dff line 17 in file
+		'./dff.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (dff)
+Information: Building the design 'dff_pre'. (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_pre line 17 in file
+		'./dff_pre.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (dff_pre)
+Information: Building the design 'execute'. (HDL-193)
+Presto compilation completed successfully. (execute)
+Information: Building the design 'memory'. (HDL-193)
+Presto compilation completed successfully. (memory)
+Information: Building the design 'write'. (HDL-193)
+Presto compilation completed successfully. (write)
+Information: Building the design 'forwarding_unit'. (HDL-193)
+Presto compilation completed successfully. (forwarding_unit)
+Information: Building the design 'hdu'. (HDL-193)
+Presto compilation completed successfully. (hdu)
+Information: Building the design 'cla16'. (HDL-193)
+Presto compilation completed successfully. (cla16)
+Information: Building the design 'register'. (HDL-193)
+Presto compilation completed successfully. (register)
+Information: Building the design 'memory2c'. (HDL-193)
+
+Inferred memory devices in process
+	in routine memory2c line 71 in file
+		'./memory2c.syn.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  512  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|   memory2c/60    |   64   |    8    |      6       |
+|   memory2c/60    |   64   |    8    |      6       |
+======================================================
+Presto compilation completed successfully. (memory2c)
+Information: Building the design 'control_unit'. (HDL-193)
+
+Statistics for case statements in always block at line 8 in file
+	'./control_unit.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            24            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (control_unit)
+Information: Building the design 'rf_bypass'. (HDL-193)
+Presto compilation completed successfully. (rf_bypass)
+Information: Building the design 'aluop'. (HDL-193)
+
+Statistics for case statements in always block at line 25 in file
+	'./aluop.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            27            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (aluop)
+Information: Building the design 'alu'. (HDL-193)
+
+Statistics for case statements in always block at line 46 in file
+	'./alu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            48            |     no/auto      |
+===============================================
+Warning:  ./alu.v:107: Statement unreachable (Branch condition impossible to meet).  (VER-61)
+Presto compilation completed successfully. (alu)
+Information: Building the design 'cla4'. (HDL-193)
+Presto compilation completed successfully. (cla4)
+Information: Building the design 'rf'. (HDL-193)
+Presto compilation completed successfully. (rf)
+Information: Building the design 'shifter'. (HDL-193)
+Presto compilation completed successfully. (shifter)
+1
+echo "********** CS552 Reading files end ********************"
+********** CS552 Reading files end ********************
+current_design proc
+Current design is 'proc'.
+{proc}
+#/* The name of the clock pin. If no clock-pin     */
+#/* exists, pick anything                          */
+set my_clock_pin clk
+clk
+#/* Target frequency in MHz for optimization       */
+set my_clk_freq_MHz 1000
+1000
+#/* Delay of input signals (Clock-to-Q, Package etc.)  */
+set my_input_delay_ns 0.1
+0.1
+#/* Reserved time for output signals (Holdtime etc.)   */
+set my_output_delay_ns 0.1
+0.1
+#/**************************************************/
+#/* No modifications needed below                  */
+#/**************************************************/
+set verilogout_show_unconnected_pins "true"
+true
+# analyze -f verilog $my_verilog_files
+# elaborate $my_toplevel -architecture verilog
+# current_design $my_toplevel
+report_hierarchy 
+ 
+****************************************
+Report : hierarchy
+Design : proc
+Version: Q-2019.12-SP3
+Date   : Sat Apr 10 20:19:37 2021
+****************************************
+
+Information: This design contains unmapped logic. (RPT-7)
+
+proc
+    GTECH_NOT                                        gtech
+    GTECH_OR2                                        gtech
+    decode
+        GTECH_AND2                                   gtech
+        GTECH_BUF                                    gtech
+        GTECH_NOT                                    gtech
+        GTECH_OR2                                    gtech
+        control_unit
+            GTECH_AND2                               gtech
+            GTECH_BUF                                gtech
+            GTECH_NOT                                gtech
+            GTECH_OR2                                gtech
+        rf_bypass
+            GTECH_BUF                                gtech
+            GTECH_NOT                                gtech
+            rf
+                GTECH_AND2                           gtech
+                GTECH_NOT                            gtech
+                GTECH_OR2                            gtech
+                register
+                    GTECH_AND2                       gtech
+                    GTECH_NOT                        gtech
+                    GTECH_OR2                        gtech
+                    dff
+                        GTECH_BUF                    gtech
+                        GTECH_NOT                    gtech
+    dff
+        ...
+    dff_en
+        GTECH_AND2                                   gtech
+        GTECH_BUF                                    gtech
+        GTECH_NOT                                    gtech
+        GTECH_OR2                                    gtech
+    dff_pre
+        GTECH_BUF                                    gtech
+        GTECH_NOT                                    gtech
+    dff_pre_en
+        GTECH_AND2                                   gtech
+        GTECH_BUF                                    gtech
+        GTECH_NOT                                    gtech
+        GTECH_OR2                                    gtech
+    execute
+        GTECH_AND2                                   gtech
+        GTECH_BUF                                    gtech
+        GTECH_NOT                                    gtech
+        GTECH_OR2                                    gtech
+        alu
+            GTECH_AND2                               gtech
+            GTECH_BUF                                gtech
+            GTECH_NOT                                gtech
+            GTECH_OR2                                gtech
+            GTECH_XOR2                               gtech
+            cla16
+                cla4
+                    GTECH_AND2                       gtech
+                    GTECH_OR2                        gtech
+                    GTECH_XOR2                       gtech
+            shifter
+                GTECH_AND2                           gtech
+                GTECH_BUF                            gtech
+                GTECH_NOT                            gtech
+                GTECH_OR2                            gtech
+        aluop
+            GTECH_AND2                               gtech
+            GTECH_BUF                                gtech
+            GTECH_NOT                                gtech
+            GTECH_OR2                                gtech
+        cla16
+            ...
+    fetch
+        cla16
+            ...
+        memory2c
+            GTECH_AND2                               gtech
+            GTECH_BUF                                gtech
+            GTECH_NOT                                gtech
+            GTECH_OR2                                gtech
+        register
+            ...
+    forwarding_unit
+        GTECH_AND2                                   gtech
+        GTECH_BUF                                    gtech
+        GTECH_NOT                                    gtech
+        GTECH_OR2                                    gtech
+    hdu
+        GTECH_AND2                                   gtech
+        GTECH_BUF                                    gtech
+        GTECH_NOT                                    gtech
+        GTECH_OR2                                    gtech
+    memory
+        GTECH_OR2                                    gtech
+        memory2c
+            ...
+    write
+        GTECH_AND2                                   gtech
+        GTECH_BUF                                    gtech
+        GTECH_NOT                                    gtech
+        GTECH_OR2                                    gtech
+1
+link
+
+  Linking design 'proc'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  gscl45nm (library)          /u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db
+
+1
+uniquify
+Information: Uniquified 31 instances of design 'dff_en'. (OPT-1056)
+Information: Uniquified 404 instances of design 'dff'. (OPT-1056)
+Information: Uniquified 5 instances of design 'cla16'. (OPT-1056)
+Information: Uniquified 9 instances of design 'register'. (OPT-1056)
+Information: Uniquified 2 instances of design 'memory2c'. (OPT-1056)
+Information: Uniquified 20 instances of design 'cla4'. (OPT-1056)
+1
+set my_period [expr 1000 / $my_clk_freq_MHz]
+1
+set find_clock [ find port [list $my_clock_pin] ]
+{clk}
+if {  $find_clock != [list] } {
+   set clk_name $my_clock_pin
+   create_clock -period $my_period $clk_name
+} else {
+   set clk_name vclk
+   create_clock -period $my_period -name $clk_name
+} 
+1
+set_driving_cell  -lib_cell INVX1  [all_inputs]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all_inputs] $my_clock_pin]
+1
+set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
+1
+compile 
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'proc'. (UIO-59)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.3 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 148 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'hdu'
+  Processing 'forwarding_unit'
+  Processing 'write'
+  Processing 'dff_382'
+  Processing 'memory2c_0'
+  Processing 'memory'
+  Processing 'cla4_8'
+  Processing 'cla16_2'
+  Processing 'shifter'
+  Processing 'alu'
+  Processing 'aluop'
+  Processing 'execute'
+  Processing 'dff_pre'
+  Processing 'register_0'
+  Processing 'rf'
+  Processing 'rf_bypass'
+  Processing 'control_unit'
+  Processing 'decode'
+  Processing 'dff_en_15'
+  Processing 'dff_pre_en'
+  Processing 'register_8'
+  Processing 'fetch'
+  Processing 'proc'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'memory2c_0_DW01_inc_0'
+  Processing 'alu_DW01_cmp6_0_DW01_cmp6_10'
+  Processing 'memory2c_1_DW01_inc_0_DW01_inc_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:11   36242.2      0.71      24.0      25.9                          
+    0:00:11   36242.2      0.71      24.0      25.9                          
+    0:00:11   37061.6      0.64      15.6      24.9                          
+    0:00:13   38801.7      0.35       8.1      20.2                          
+    0:00:13   38801.7      0.35       8.1      20.2                          
+    0:00:13   38801.7      0.35       8.1      20.2                          
+    0:00:13   38801.7      0.35       8.1      20.2                          
+    0:00:13   38801.7      0.35       8.1      20.2                          
+    0:00:14   36992.1      0.47     164.1      19.1                          
+    0:00:15   37022.1      0.42      21.1      19.1                          
+    0:00:15   36993.0      0.41       8.7      19.1                          
+    0:00:16   36994.4      0.40      20.9      19.1                          
+    0:00:16   36997.7      0.39       8.5      19.1                          
+    0:00:16   36996.8      0.39      20.9      19.1                          
+    0:00:16   36997.7      0.39       8.5      19.1                          
+    0:00:16   36996.8      0.39      20.9      19.1                          
+    0:00:16   36997.7      0.40       8.5      19.1                          
+    0:00:16   36996.8      0.40      20.9      19.1                          
+    0:00:16   36996.8      0.40      20.9      19.1                          
+    0:00:17   36996.8      0.40      20.9      19.1                          
+    0:00:17   36996.8      0.40      20.9      19.1                          
+    0:00:20   37399.9      0.46      11.5      16.0                          
+    0:00:23   37689.5      0.57      15.2      13.2                          
+    0:00:29   37801.6      0.57      15.4      13.1                          
+    0:00:34   37843.9      0.57      15.5      13.2                          
+    0:00:35   37871.6      0.57      15.6      13.3                          
+    0:00:35   37903.0      0.57      15.6      13.3                          
+    0:00:36   37931.6      0.57      15.6      13.2                          
+    0:00:36   37957.9      0.57      15.6      13.1                          
+    0:00:36   37984.2      0.57      15.6      13.1                          
+    0:00:36   37984.2      0.57      15.6      13.1                          
+    0:00:36   38005.8      0.45      11.6      13.0 EMPC_out[0]/state_reg/D  
+    0:00:36   38007.2      0.43      11.4      13.1 EMPC_out[0]/state_reg/D  
+    0:00:36   38010.5      0.41      11.4      13.1 EMPC_out[0]/state_reg/D  
+    0:00:36   38043.3      0.40      10.7      13.1 EMPC_out[0]/state_reg/D  
+    0:00:36   38048.5      0.39      10.7      13.1 EMPC_out[0]/state_reg/D  
+    0:00:36   38056.5      0.38       9.2      13.1 EMPC_out[0]/state_reg/D  
+    0:00:36   38055.1      0.36       9.0      13.1 EMPC_out[0]/state_reg/D  
+    0:00:36   38063.0      0.34       8.8      13.1 EMPC_out[0]/state_reg/D  
+    0:00:37   38069.6      0.33       8.7      13.1                          
+    0:00:37   38091.2      0.31       8.6      13.1                          
+    0:00:37   38091.2      0.31       8.6      13.1                          
+    0:00:37   38100.1      0.30       8.5      13.1                          
+    0:00:37   38114.2      0.30       8.5      13.1                          
+    0:00:37   38116.1      0.29       8.5      13.1                          
+    0:00:37   38132.5      0.29       8.1      13.1                          
+    0:00:37   38141.9      0.28       8.0      13.1                          
+    0:00:37   38141.4      0.28       8.0      13.1                          
+    0:00:37   38148.5      0.27       8.0      13.1                          
+    0:00:37   38156.0      0.27       8.0      13.1                          
+    0:00:37   38183.2      0.27       8.0      13.1                          
+    0:00:37   38190.7      0.27       7.9      13.1                          
+    0:00:37   38188.8      0.26       7.9      13.1                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:37   38188.8      0.26       7.9      13.1                          
+    0:00:37   38199.6      0.26       7.9      13.1 EMPC_out[0]/state_reg/D  
+    0:00:37   38199.1      0.26       7.9      13.1 EMPC_out[0]/state_reg/D  
+    0:00:37   38212.3      0.24       7.8      13.1 EMPC_out[0]/state_reg/D  
+    0:00:37   38213.7      0.24       7.8      13.1 EMPC_out[0]/state_reg/D  
+    0:00:37   38226.8      0.23       7.7      13.1 EMPC_out[0]/state_reg/D  
+    0:00:37   38237.2      0.23       7.7      13.1 EMPC_out[0]/state_reg/D  
+    0:00:37   38237.6      0.23       7.5      13.1 EMPC_out[0]/state_reg/D  
+    0:00:37   38231.1      0.22       7.5      13.1 EMPC_out[0]/state_reg/D  
+    0:00:37   38242.8      0.22       7.4      13.1 EMPC_out[0]/state_reg/D  
+    0:00:37   38243.3      0.21       7.4      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38246.1      0.21       7.3      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38249.8      0.20       7.2      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38251.7      0.20       7.2      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38262.5      0.19       7.1      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38264.8      0.19       7.1      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38262.5      0.19       7.1      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38270.5      0.19       7.1      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38270.0      0.19       7.0      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38280.8      0.18       7.0      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38285.5      0.18       7.0      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38287.4      0.18       7.0      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38291.1      0.18       7.0      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38300.0      0.18       7.0      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38303.8      0.18       6.6      13.1 EMPC_out[6]/state_reg/D  
+    0:00:38   38309.4      0.18       6.6      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38310.8      0.17       6.6      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38320.2      0.17       6.6      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38327.7      0.17       6.6      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38326.3      0.17       6.5      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38327.3      0.17       6.5      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38327.3      0.17       6.5      13.1 EMPC_out[0]/state_reg/D  
+    0:00:38   38331.0      0.17       6.6      13.1 EMPC_out[0]/state_reg/D  
+    0:00:39   38331.0      0.16       6.6      13.1 EMPC_out[0]/state_reg/D  
+    0:00:39   38333.8      0.16       6.6      13.1 EMPC_out[0]/state_reg/D  
+    0:00:39   38341.8      0.16       6.6      13.1 EMPC_out[0]/state_reg/D  
+    0:00:39   38350.3      0.16       6.5      13.1 EMPC_out[0]/state_reg/D  
+    0:00:39   38355.9      0.16       6.5      13.1 EMPC_out[0]/state_reg/D  
+    0:00:39   38363.4      0.16       6.5      13.1 EMPC_out[0]/state_reg/D  
+    0:00:39   38369.5      0.15       6.5      13.1 EMPC_out[0]/state_reg/D  
+    0:00:39   38367.6      0.15       6.5      13.1 EMPC_out[0]/state_reg/D  
+    0:00:39   38370.0      0.15       6.5      13.1 EMPC_out[0]/state_reg/D  
+    0:00:39   38372.3      0.15       6.5      13.1 EMPC_out[0]/state_reg/D  
+    0:00:39   38376.5      0.15       6.5      13.1 EMPC_out[0]/state_reg/D  
+    0:00:39   38380.3      0.15       6.5      13.1 EMPC_out[0]/state_reg/D  
+    0:00:39   38385.0      0.13       6.3      13.1 EMPC_out[0]/state_reg/D  
+    0:00:40   38405.2      0.08       5.5      13.1 EMPC_out[14]/state_reg/D 
+    0:00:40   38403.8      0.08       5.5      13.1                          
+    0:00:40   38403.8      0.08       5.5      13.1                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:40   38403.8      0.08       5.5      13.1                          
+    0:00:40   38448.8      0.08       5.4      12.5 iWR/wr_data<13>          
+    0:00:40   38521.6      0.08       5.4      12.3 iEX/iALU/shft_cnt<2>     
+    0:00:40   38585.4      0.08       5.4      12.3 iEX/iALU/neg_adder/cla4_1/net29404
+    0:00:40   38653.0      0.08       5.4      12.1 iEX/iALU/Out<5>          
+    0:00:40   38683.9      0.08       5.3      12.1 iEX/iALU/adder/cla4_2/net29017
+    0:00:40   38726.6      0.08       5.3      12.1 iEX/PC_add_br/cla4_1/net28820
+    0:00:40   38775.9      0.08       5.3      12.0 iFET/instr_mem/n114      
+    0:00:40   38832.2      0.08       5.3      12.0 iEX/iALU/adder/cla4_1/net29047
+    0:00:40   38940.2      0.08       5.3      11.9 iFET/instr_mem/n423      
+    0:00:40   39024.2      0.08       5.3      11.8 iEX/iALU/net29529        
+    0:00:40   39048.1      0.08       5.3      11.8 iFET/PC_adder/cla4_1/net37970
+    0:00:41   39064.5      0.08       5.3      11.8 iEX/iALU/net29460        
+    0:00:41   39103.5      0.08       5.3      11.8 iFET/instr_mem/n1072     
+    0:00:41   39134.9      0.08       5.3      11.7 iMEM/data_mem/C2243/net12180
+    0:00:41   39299.7      0.08       5.3      11.6 iMEM/data_mem/C2242/net13568
+    0:00:41   39464.4      0.08       5.3      11.5 iFET/instr_mem/C2242/net13716
+    0:00:41   39543.7      0.08       5.3      11.5 iEX/iALU/net29446        
+    0:00:41   39550.7      0.08       5.3      11.5 iEX/iALU/shift/net29200  
+    0:00:41   39715.5      0.08       5.3      11.4 iMEM/data_mem/C2242/net13522
+    0:00:41   39880.2      0.08       5.3      11.2 iFET/instr_mem/C2242/net13628
+    0:00:41   40017.7      0.08       5.3      11.2 iEX/iALU/net29586        
+    0:00:41   40142.0      0.08       5.3      11.1 iWR/net28704             
+    0:00:41   40263.1      0.08       5.3      11.1 iMEM/data_mem/C2242/net13650
+    0:00:41   40392.2      0.08       5.3      11.0 iMEM/data_mem/C2243/net12146
+    0:00:41   40531.6      0.08       5.3      11.0 iMEM/data_mem/C2242/net13865
+    0:00:41   40606.2      0.08       5.3      11.0 iEX/iALU/net29454        
+    0:00:42   40631.1      0.08       5.3      11.0 iMEM/data_mem/C2243/net12143
+    0:00:42   40711.3      0.08       5.3      11.0 iMEM/data_mem/C2243/net12144
+    0:00:42   40791.6      0.08       5.3      11.0 iFET/PC_adder/cla4_2/net29923
+    0:00:42   40814.6      0.08       5.3      10.9 frwrd/net28644           
+    0:00:42   40961.9      0.08       5.3      10.9 iDEC/reg_file_bp/reg_file/read2data<4>
+    0:00:44   41340.2      0.08       5.3      10.9 iEX/iALU/net29587        
+    0:00:44   41350.0      0.08       5.2      10.9 iEX/iALU/neg_adder/cla4_1/net29409
+    0:00:44   41366.0      0.08       5.2      10.7 iFET/instr_mem/C2242/net13400
+    0:00:45   41369.3      0.08       5.2      10.6 iFET/instr_mem/C2242/net13402
+    0:00:45   41382.9      0.08       5.2      10.4 iDEC/cntrl/n14           
+    0:00:45   41388.5      0.08       5.2      10.4 iEX/iALU_Op/net29653     
+    0:00:45   41394.1      0.08       5.2      10.4 iEX/iALU/neg_adder/cla4_2/net29340
+    0:00:45   41394.6      0.08       5.3      10.4 iEX/iALU/neg_adder/cla4_3/net29300
+    0:00:45   41392.7      0.08       5.3      10.4 iEX/net29791             
+    0:00:45   41392.7      0.08       5.3      10.4 iEX/iALU/adder/cla4_2/net29027
+    0:00:45   41397.9      0.08       5.3      10.4 FDInstrm/n2              
+    0:00:46   41403.1      0.08       5.3      10.4 iFET/instr_mem/n93       
+    0:00:47   41542.4      0.08       5.3      10.4 iFET/instr_mem/n167      
+    0:00:47   41681.8      0.08       5.3      10.4 iFET/instr_mem/n236      
+    0:00:47   41821.2      0.08       5.3      10.4 iFET/instr_mem/n309      
+    0:00:47   41960.6      0.08       5.3      10.4 iFET/instr_mem/n375      
+    0:00:47   42100.0      0.08       5.3      10.3 iFET/instr_mem/n442      
+    0:00:47   42239.3      0.08       5.3      10.3 iFET/instr_mem/n512      
+    0:00:47   42378.7      0.08       5.3      10.3 iFET/instr_mem/n578      
+    0:00:47   42518.1      0.08       5.3      10.3 iFET/instr_mem/n647      
+    0:00:47   42657.5      0.08       5.3      10.3 iFET/instr_mem/n716      
+    0:00:47   42796.9      0.08       5.3      10.3 iFET/instr_mem/n784      
+    0:00:47   42936.3      0.08       5.3      10.2 iFET/instr_mem/n854      
+    0:00:47   43075.6      0.08       5.3      10.2 iFET/instr_mem/n922      
+    0:00:47   43215.0      0.08       5.3      10.2 iFET/instr_mem/n988      
+    0:00:47   43354.4      0.08       5.3      10.2 iFET/instr_mem/n1058     
+    0:00:47   43493.8      0.08       5.3      10.2 iFET/instr_mem/n1126     
+    0:00:47   43633.2      0.08       5.3      10.2 iFET/instr_mem/n1193     
+    0:00:48   43772.5      0.08       5.3      10.2 iFET/instr_mem/n1264     
+    0:00:48   43911.9      0.08       5.3      10.1 iFET/instr_mem/n1330     
+    0:00:48   44002.5      0.08       5.3      10.1 iEX/net29696             
+    0:00:48   44002.5      0.08       5.3      10.1 EMPC_out[0]/state_reg/D  
+    0:00:48   44005.3      0.08       5.3      10.1 EMPC_out[0]/state_reg/D  
+    0:00:48   44009.1      0.07       5.2      10.1 EMPC_out[0]/state_reg/D  
+    0:00:49   44007.2      0.07       5.2      10.1 EMPC_out[0]/state_reg/D  
+    0:00:49   44014.7      0.07       5.2      10.1 EMPC_out[0]/state_reg/D  
+    0:00:49   44011.9      0.07       5.2      10.1 EMPC_out[0]/state_reg/D  
+    0:00:49   44012.4      0.07       5.2      10.1 EMPC_out[0]/state_reg/D  
+    0:00:49   44012.4      0.07       5.2      10.1 EMPC_out[13]/state_reg/D 
+    0:00:49   44022.2      0.07       5.2      10.1 EMPC_out[14]/state_reg/D 
+    0:00:49   44020.3      0.07       5.2      10.1 EMPC_out[14]/state_reg/D 
+    0:00:49   44023.2      0.07       5.1      10.1 EMPC_out[0]/state_reg/D  
+    0:00:49   44029.3      0.07       5.1      10.1 EMPC_out[13]/state_reg/D 
+    0:00:49   44037.7      0.06       5.1      10.2 EMPC_out[0]/state_reg/D  
+    0:00:49   44040.0      0.06       5.1      10.1 iEX/iALU/Op<1>           
+    0:00:49   44053.7      0.06       5.1      10.1 iEX/ALU_out<3>           
+    0:00:49   44062.6      0.06       5.1      10.1 iWR/net28658             
+    0:00:49   44061.6      0.06       5.1      10.1 iEX/iALU_Op/net29673     
+    0:00:49   44059.3      0.06       5.1      10.1 iEX/iALU/Out<12>         
+    0:00:49   44061.2      0.06       5.1      10.1 iEX/iALU/adder/cla4_2/net29005
+    0:00:50   44064.0      0.06       5.1      10.1 iEX/iALU/net29517        
+    0:00:50   44074.3      0.06       5.1      10.1 iWR/net28672             
+    0:00:50   44079.0      0.06       5.1      10.1 iEX/iALU/net36909        
+    0:00:51   44080.9      0.06       5.1      10.1 iEX/iALU/net29567        
+    0:00:52   44081.3      0.06       5.1      10.1 EMPC_out[1]/d            
+    0:00:52   44083.2      0.07       5.1      10.1 EMPC_out[13]/state_reg/D 
+    0:00:52   44084.6      0.07       5.2      10.1 EMPC_out[13]/state_reg/D 
+    0:00:52   44087.0      0.09       5.3      10.1 EMPC_out[13]/state_reg/D 
+    0:00:52   44093.1      0.08       5.2      10.1 EMPC_out[12]/state_reg/D 
+    0:00:53   44088.4      0.08       5.2      10.1 EMPC_out[13]/state_reg/D 
+    0:00:53   44089.8      0.08       5.2      10.1 EMPC_out[13]/state_reg/D 
+    0:00:53   44089.8      0.07       5.2      10.1 EMPC_out[13]/state_reg/D 
+    0:00:53   44088.4      0.07       5.2      10.1 EMPC_out[13]/state_reg/D 
+    0:00:53   44092.1      0.10       5.5      10.1 iEX/iALU/neg_adder/cla4_1/net29403
+    0:00:53   44128.7      0.13       5.7      10.0 iEX/iALU/adder/cla4_1/A<2>
+    0:00:53   44183.2      0.19       6.7       9.9 iEX/iALU/adder/cla4_1/A<1>
+    0:00:53   44229.6      0.23       7.2       9.9 iEX/iALU/adder/cla4_4/A<0>
+    0:00:54   44266.7      0.27       7.9       9.9 iEX/iALU/neg_adder/cla4_2/Cin
+    0:00:54   44342.3      0.30       8.5       9.8 iEX/iALU/net48524        
+    0:00:54   44347.0      0.30       8.5       9.8 iEX/iALU/adder/cla4_2/net29004
+    0:00:54   44402.3      0.36       9.6       9.7 iEX/iALU/neg_adder/cla4_1/net29399
+    0:00:54   44453.5      0.37       9.9       9.7 iEX/PC_add_dis/cla4_4/net28852
+    0:00:54   44481.7      0.41      10.4       9.7 iEX/iALU/adder/cla4_3/net29000
+    0:00:54   44504.2      0.48      11.2       9.6 iEX/iALU/net29510        
+    0:00:55   44520.6      0.48      11.3       9.6 hazard_unit/net28618     
+    0:00:56   44563.3      0.50      11.8       9.6 iEX/iALU/net29621        
+    0:00:56   44631.4      0.52      12.3       9.6 iEX/iALU/shift/net29087  
+    0:00:56   44702.7      0.53      12.4       9.5 iDEC/reg_file_bp/n55     
+    0:00:56   44811.1      0.54      12.8       9.5 iEX/iALU/shift/net29185  
+    0:00:57   44871.2      0.54      12.9       9.4 iEX/iALU/neg_adder/cla4_1/net36853
+    0:00:57   44932.2      0.60      14.7       9.4 iEX/iALU/net29548        
+    0:00:57   44964.6      0.58      15.2       9.4 EMPC_out[0]/state_reg/D  
+    0:00:57   44958.9      0.55      15.0       9.4 EMPC_out[0]/state_reg/D  
+    0:00:57   44966.9      0.54      14.8       9.4 EMPC_out[0]/state_reg/D  
+    0:00:57   44962.7      0.53      14.7       9.4 EMPC_out[12]/state_reg/D 
+    0:00:57   44963.6      0.52      14.4       9.4 EMPC_out[13]/state_reg/D 
+    0:00:57   44961.8      0.51      14.3       9.4 EMPC_out[0]/state_reg/D  
+    0:00:57   44966.4      0.50      14.3       9.4 EMPC_out[0]/state_reg/D  
+    0:00:57   44973.5      0.49      14.1       9.4 EMPC_out[0]/state_reg/D  
+    0:00:57   44973.0      0.48      14.0       9.4 EMPC_out[13]/state_reg/D 
+    0:00:57   44970.7      0.47      13.9       9.4 EMPC_out[13]/state_reg/D 
+    0:00:57   44972.5      0.47      13.7       9.4 EMPC_out[13]/state_reg/D 
+    0:00:57   44974.9      0.47      13.7       9.4 EMPC_out[0]/state_reg/D  
+    0:00:57   44971.6      0.47      13.7       9.4 EMPC_out[0]/state_reg/D  
+    0:00:57   44973.0      0.47      13.7       9.4 EMPC_out[13]/state_reg/D 
+    0:00:57   44977.2      0.47      13.7       9.4 EMPC_out[0]/state_reg/D  
+    0:00:57   44974.9      0.47      13.6       9.4 EMPC_out[14]/state_reg/D 
+    0:00:57   44977.2      0.47      13.6       9.4 EMPC_out[0]/state_reg/D  
+    0:00:57   44973.5      0.46      13.5       9.4 EMPC_out[0]/state_reg/D  
+    0:00:58   44971.1      0.46      13.5       9.4 EMPC_out[0]/state_reg/D  
+    0:00:58   44971.1      0.46      13.5       9.4 iFET/PC_adder/cla4_4/net29867
+    0:00:58   44983.3      0.46      13.5       9.4 iEX/iALU_Op/net29661     
+    0:00:58   44985.7      0.45      13.4       9.4 frwrd/net28633           
+    0:01:00   44988.0      0.45      13.2       9.4 iEX/net29843             
+    0:01:00   44986.6      0.45      13.2       9.4 EMPC_out[0]/state_reg/D  
+    0:01:00   44986.6      0.44      13.1       9.4 EMPC_out[0]/state_reg/D  
+    0:01:00   44986.2      0.44      13.1       9.4 EMPC_out[0]/state_reg/D  
+    0:01:00   44981.5      0.42      12.6       9.4 EMPC_out[13]/state_reg/D 
+    0:01:00   44992.3      0.41      12.6       9.4 EMPC_out[13]/state_reg/D 
+    0:01:00   44999.3      0.41      12.5       9.4 EMPC_out[13]/state_reg/D 
+    0:01:01   44997.9      0.41      12.5       9.4 EMPC_out[13]/state_reg/D 
+    0:01:01   44996.5      0.41      12.5       9.4 EMPC_out[13]/state_reg/D 
+    0:01:01   44996.0      0.41      12.5       9.4                          
+    0:01:01   44993.2      0.41      12.4       9.4                          
+    0:01:01   44996.0      0.41      12.4       9.4                          
+    0:01:01   45002.1      0.41      12.4       9.4                          
+    0:01:01   45007.3      0.41      12.2       9.4                          
+    0:01:01   45004.5      0.41      12.0       9.3                          
+    0:01:01   45009.2      0.41      11.9       9.3                          
+    0:01:01   45009.2      0.41      11.8       9.3                          
+    0:01:01   45019.9      0.41      11.6       9.3                          
+    0:01:01   45014.8      0.41      11.4       9.3                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:01   45014.8      0.41      11.4       9.3                          
+    0:01:01   45014.8      0.41      11.4       9.3                          
+    0:01:02   42596.5      0.41       7.3       9.2                          
+    0:01:03   41767.2      0.41       7.2       9.1                          
+    0:01:03   41350.0      0.41       7.2       9.1                          
+    0:01:03   41257.6      0.41       7.2       9.1                          
+    0:01:03   41195.6      0.41       7.2       9.1                          
+    0:01:03   41135.1      0.41       7.2       9.1                          
+    0:01:03   41076.0      0.41       7.2       9.1                          
+    0:01:03   41076.0      0.41       7.2       9.1                          
+    0:01:03   41076.0      0.41       7.2       9.1                          
+    0:01:04   40978.3      0.41       7.4       9.1                          
+    0:01:04   40977.4      0.41       7.4       9.1                          
+    0:01:04   40977.4      0.41       7.4       9.1                          
+    0:01:04   40977.4      0.41       7.4       9.1                          
+    0:01:04   40977.4      0.41       7.4       9.1                          
+    0:01:04   40977.4      0.41       7.4       9.1                          
+    0:01:04   40977.4      0.41       7.4       9.1                          
+    0:01:04   40977.9      0.40       7.4       9.1 EMPC_out[13]/state_reg/D 
+    0:01:04   40976.9      0.40       7.4       9.1 EMPC_out[0]/state_reg/D  
+    0:01:04   40979.7      0.40       7.4       9.1 EMPC_out[0]/state_reg/D  
+    0:01:04   40975.1      0.40       7.4       9.1                          
+    0:01:04   40964.3      0.40       7.3       9.1                          
+    0:01:04   40942.2      0.40       7.3       9.1                          
+    0:01:04   40914.0      0.40       7.3       9.1                          
+    0:01:04   40887.3      0.40       7.2       9.1                          
+    0:01:04   40885.9      0.40       7.2       9.1                          
+    0:01:04   40891.5      0.40       7.2       9.1                          
+    0:01:04   40889.6      0.40       7.2       9.1                          
+    0:01:04   40900.9      0.40       7.2       9.1                          
+    0:01:04   40900.9      0.40       7.1       9.1                          
+    0:01:04   40899.5      0.40       7.0       9.1                          
+    0:01:04   40906.5      0.40       6.9       9.1                          
+    0:01:04   40908.4      0.40       6.9       9.1 EMPC_out[0]/state_reg/D  
+    0:01:04   40910.8      0.39       6.9       9.1 EMPC_out[0]/state_reg/D  
+    0:01:04   40912.2      0.39       7.0       9.1 EMPC_out[0]/state_reg/D  
+    0:01:05   40914.5      0.39       7.0       9.1 EMPC_out[0]/state_reg/D  
+    0:01:05   40916.9      0.39       7.0       9.1 EMPC_out[0]/state_reg/D  
+Loading db file '/u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'proc' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'iMEM/data_mem/clk': 1461 load(s), 1 driver(s)
+     Net 'iFET/PC_adder/cla4_2/B<0>': 1065 load(s), 1 driver(s)
+1
+check_design -summary
+ 
+****************************************
+check_design summary:
+Version:     Q-2019.12-SP3
+Date:        Sat Apr 10 20:20:40 2021
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     12
+    Unconnected ports (LINT-28)                                     7
+    Constant outputs (LINT-52)                                      5
+
+Cells                                                              68
+    Cells do not drive (LINT-1)                                     9
+    Connected to power or ground (LINT-32)                         56
+    Nets connected to multiple pins on same cell (LINT-33)          3
+
+Nets                                                                2
+    Unloaded nets (LINT-2)                                          2
+--------------------------------------------------------------------------------
+
+Information: Use the 'check_design' command for 
+	 more information about warnings. (LINT-98)
+
+1
+set filename [format "%s%s"  $my_toplevel ".syn.v"]
+proc.syn.v
+write -hierarchy -f verilog $my_toplevel -output synth/$filename
+Writing verilog file '/afs/cs.wisc.edu/u/a/n/anygard/private/ece552/project/demo2/verilog/synth/proc.syn.v'.
+Warning: Bus naming style currently specified as %s<%d>, verilog syntax requires bus naming style to be "[]".  (VO-13)
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+set filename [format "%s%s"  $my_toplevel ".ddc"]
+proc.ddc
+write -hierarchy -format ddc -output synth/$filename
+Writing ddc file 'synth/proc.ddc'.
+1
+report_hierarchy > synth/hierarchy.txt
+report_reference > synth/reference_report.txt
+report_area > synth/area_report.txt
+report_cell > synth/cell_report.txt
+report_timing -max_paths 20 > synth/timing_report.txt
+report_power > synth/power_report.txt
+quit
+
+Memory usage for this session 128 Mbytes.
+Memory usage for this session including child processes 128 Mbytes.
+CPU usage for this session 65 seconds ( 0.02 hours ).
+Elapsed time for this session 67 seconds ( 0.02 hours ).
+
+Thank you...

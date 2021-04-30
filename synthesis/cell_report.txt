@@ -1,0 +1,365 @@
+ 
+****************************************
+Report : cell
+Design : proc
+Version: Q-2019.12-SP3
+Date   : Sat Apr 10 20:20:41 2021
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+DEALU_src                 dff_396                         11.732500 h, n
+DEInstrh[0]               dff_378                         11.732500 h, n
+DEInstrh[1]               dff_379                         18.302700 h, n
+DEInstrh[2]               dff_380                         11.732500 h, n
+DEInstrh[3]               dff_381                         11.732500 h, n
+DEInstrl[0]               dff_367                         11.732500 h, n
+DEInstrl[1]               dff_368                         11.732500 h, n
+DEInstrl[2]               dff_369                         11.732500 h, n
+DEInstrl[3]               dff_370                         11.732500 h, n
+DEInstrl[4]               dff_371                         11.732500 h, n
+DEInstrl[5]               dff_372                         11.732500 h, n
+DEInstrl[6]               dff_373                         11.732500 h, n
+DEInstrl[7]               dff_374                         11.732500 h, n
+DEInstrl[8]               dff_375                         11.732500 h, n
+DEInstrl[9]               dff_376                         11.732500 h, n
+DEInstrl[10]              dff_377                         11.732500 h, n
+DEInstrm                  dff_pre                         10.324600 h, n
+DEPC_inc[0]               dff_351                         11.732500 h, n
+DEPC_inc[1]               dff_352                         11.732500 h, n
+DEPC_inc[2]               dff_353                         11.732500 h, n
+DEPC_inc[3]               dff_354                         11.732500 h, n
+DEPC_inc[4]               dff_355                         11.732500 h, n
+DEPC_inc[5]               dff_356                         11.732500 h, n
+DEPC_inc[6]               dff_357                         11.732500 h, n
+DEPC_inc[7]               dff_358                         11.732500 h, n
+DEPC_inc[8]               dff_359                         11.732500 h, n
+DEPC_inc[9]               dff_360                         11.732500 h, n
+DEPC_inc[10]              dff_361                         11.732500 h, n
+DEPC_inc[11]              dff_362                         11.732500 h, n
+DEPC_inc[12]              dff_363                         11.732500 h, n
+DEPC_inc[13]              dff_364                         11.732500 h, n
+DEPC_inc[14]              dff_365                         11.732500 h, n
+DEPC_inc[15]              dff_366                         11.732500 h, n
+DERd[0]                   dff_262                         11.732500 h, n
+DERd[1]                   dff_263                         11.732500 h, n
+DERd[2]                   dff_264                         11.732500 h, n
+DERs[0]                   dff_268                         11.732500 h, n
+DERs[1]                   dff_269                         11.732500 h, n
+DERs[2]                   dff_270                         11.732500 h, n
+DERt[0]                   dff_265                         11.732500 h, n
+DERt[1]                   dff_266                         11.732500 h, n
+DERt[2]                   dff_267                         11.732500 h, n
+DEbrnch                   dff_398                         11.732500 h, n
+DEhalt                    dff_395                         11.732500 h, n
+DEimm_8_ext[0]            dff_287                         11.732500 h, n
+DEimm_8_ext[1]            dff_288                         11.732500 h, n
+DEimm_8_ext[2]            dff_289                         11.732500 h, n
+DEimm_8_ext[3]            dff_290                         11.732500 h, n
+DEimm_8_ext[4]            dff_291                         11.732500 h, n
+DEimm_8_ext[5]            dff_292                         11.732500 h, n
+DEimm_8_ext[6]            dff_293                         11.732500 h, n
+DEimm_8_ext[7]            dff_294                         11.732500 h, n
+DEimm_8_ext[8]            dff_295                         11.732500 h, n
+DEimm_8_ext[9]            dff_296                         11.732500 h, n
+DEimm_8_ext[10]           dff_297                         11.732500 h, n
+DEimm_8_ext[11]           dff_298                         11.732500 h, n
+DEimm_8_ext[12]           dff_299                         11.732500 h, n
+DEimm_8_ext[13]           dff_300                         11.732500 h, n
+DEimm_8_ext[14]           dff_301                         11.732500 h, n
+DEimm_8_ext[15]           dff_302                         11.732500 h, n
+DEimm_10_ext[0]           dff_303                         11.732500 h, n
+DEimm_10_ext[1]           dff_304                         11.732500 h, n
+DEimm_10_ext[2]           dff_305                         11.732500 h, n
+DEimm_10_ext[3]           dff_306                         11.732500 h, n
+DEimm_10_ext[4]           dff_307                         11.732500 h, n
+DEimm_10_ext[5]           dff_308                         11.732500 h, n
+DEimm_10_ext[6]           dff_309                         11.732500 h, n
+DEimm_10_ext[7]           dff_310                         11.732500 h, n
+DEimm_10_ext[8]           dff_311                         11.732500 h, n
+DEimm_10_ext[9]           dff_312                         11.732500 h, n
+DEimm_10_ext[10]          dff_313                         11.732500 h, n
+DEimm_10_ext[11]          dff_314                         11.732500 h, n
+DEimm_10_ext[12]          dff_315                         11.732500 h, n
+DEimm_10_ext[13]          dff_316                         11.732500 h, n
+DEimm_10_ext[14]          dff_317                         11.732500 h, n
+DEimm_10_ext[15]          dff_318                         11.732500 h, n
+DEimm_in[0]               dff_271                         11.732500 h, n
+DEimm_in[1]               dff_272                         11.732500 h, n
+DEimm_in[2]               dff_273                         11.732500 h, n
+DEimm_in[3]               dff_274                         11.732500 h, n
+DEimm_in[4]               dff_275                         11.732500 h, n
+DEimm_in[5]               dff_276                         11.732500 h, n
+DEimm_in[6]               dff_277                         11.732500 h, n
+DEimm_in[7]               dff_278                         11.732500 h, n
+DEimm_in[8]               dff_279                         11.732500 h, n
+DEimm_in[9]               dff_280                         11.732500 h, n
+DEimm_in[10]              dff_281                         11.732500 h, n
+DEimm_in[11]              dff_282                         11.732500 h, n
+DEimm_in[12]              dff_283                         11.732500 h, n
+DEimm_in[13]              dff_284                         11.732500 h, n
+DEimm_in[14]              dff_285                         11.732500 h, n
+DEimm_in[15]              dff_286                         11.732500 h, n
+DEjmp                     dff_402                         11.732500 h, n
+DEmem_rd                  dff_400                         11.732500 h, n
+DEmem_to_reg              dff_397                         11.732500 h, n
+DEmem_wr                  dff_401                         11.732500 h, n
+DEread1data[0]            dff_335                         11.732500 h, n
+DEread1data[1]            dff_336                         11.732500 h, n
+DEread1data[2]            dff_337                         11.732500 h, n
+DEread1data[3]            dff_338                         11.732500 h, n
+DEread1data[4]            dff_339                         11.732500 h, n
+DEread1data[5]            dff_340                         11.732500 h, n
+DEread1data[6]            dff_341                         11.732500 h, n
+DEread1data[7]            dff_342                         11.732500 h, n
+DEread1data[8]            dff_343                         11.732500 h, n
+DEread1data[9]            dff_344                         11.732500 h, n
+DEread1data[10]           dff_345                         11.732500 h, n
+DEread1data[11]           dff_346                         11.732500 h, n
+DEread1data[12]           dff_347                         11.732500 h, n
+DEread1data[13]           dff_348                         11.732500 h, n
+DEread1data[14]           dff_349                         11.732500 h, n
+DEread1data[15]           dff_350                         11.732500 h, n
+DEread2data[0]            dff_319                         11.732500 h, n
+DEread2data[1]            dff_320                         11.732500 h, n
+DEread2data[2]            dff_321                         11.732500 h, n
+DEread2data[3]            dff_322                         11.732500 h, n
+DEread2data[4]            dff_323                         11.732500 h, n
+DEread2data[5]            dff_324                         11.732500 h, n
+DEread2data[6]            dff_325                         11.732500 h, n
+DEread2data[7]            dff_326                         11.732500 h, n
+DEread2data[8]            dff_327                         11.732500 h, n
+DEread2data[9]            dff_328                         11.732500 h, n
+DEread2data[10]           dff_329                         11.732500 h, n
+DEread2data[11]           dff_330                         11.732500 h, n
+DEread2data[12]           dff_331                         11.732500 h, n
+DEread2data[13]           dff_332                         11.732500 h, n
+DEread2data[14]           dff_333                         11.732500 h, n
+DEread2data[15]           dff_334                         11.732500 h, n
+DEreg_wr                  dff_403                         11.732500 h, n
+DEwr_r7                   dff_399                         11.732500 h, n
+EMALU_out[0]              dff_198                         11.732500 h, n
+EMALU_out[1]              dff_199                         11.732500 h, n
+EMALU_out[2]              dff_200                         11.732500 h, n
+EMALU_out[3]              dff_201                         11.732500 h, n
+EMALU_out[4]              dff_202                         11.732500 h, n
+EMALU_out[5]              dff_203                         11.732500 h, n
+EMALU_out[6]              dff_204                         11.732500 h, n
+EMALU_out[7]              dff_205                         11.732500 h, n
+EMALU_out[8]              dff_206                         11.732500 h, n
+EMALU_out[9]              dff_207                         11.732500 h, n
+EMALU_out[10]             dff_208                         11.732500 h, n
+EMALU_out[11]             dff_209                         11.732500 h, n
+EMALU_out[12]             dff_210                         11.732500 h, n
+EMALU_out[13]             dff_211                         11.732500 h, n
+EMALU_out[14]             dff_212                         11.732500 h, n
+EMALU_out[15]             dff_213                         11.732500 h, n
+EMPC_inc[0]               dff_246                         11.732500 h, n
+EMPC_inc[1]               dff_247                         11.732500 h, n
+EMPC_inc[2]               dff_248                         11.732500 h, n
+EMPC_inc[3]               dff_249                         11.732500 h, n
+EMPC_inc[4]               dff_250                         11.732500 h, n
+EMPC_inc[5]               dff_251                         11.732500 h, n
+EMPC_inc[6]               dff_252                         11.732500 h, n
+EMPC_inc[7]               dff_253                         11.732500 h, n
+EMPC_inc[8]               dff_254                         11.732500 h, n
+EMPC_inc[9]               dff_255                         11.732500 h, n
+EMPC_inc[10]              dff_256                         11.732500 h, n
+EMPC_inc[11]              dff_257                         11.732500 h, n
+EMPC_inc[12]              dff_258                         11.732500 h, n
+EMPC_inc[13]              dff_259                         11.732500 h, n
+EMPC_inc[14]              dff_260                         11.732500 h, n
+EMPC_inc[15]              dff_261                         11.732500 h, n
+EMPC_out[0]               dff_230                         11.732500 h, n
+EMPC_out[1]               dff_231                         12.201800 h, n
+EMPC_out[2]               dff_232                         11.732500 h, n
+EMPC_out[3]               dff_233                         11.732500 h, n
+EMPC_out[4]               dff_234                         11.732500 h, n
+EMPC_out[5]               dff_235                         11.732500 h, n
+EMPC_out[6]               dff_236                         12.201800 h, n
+EMPC_out[7]               dff_237                         12.201800 h, n
+EMPC_out[8]               dff_238                         11.732500 h, n
+EMPC_out[9]               dff_239                         11.732500 h, n
+EMPC_out[10]              dff_240                         11.732500 h, n
+EMPC_out[11]              dff_241                         11.732500 h, n
+EMPC_out[12]              dff_242                         12.201800 h, n
+EMPC_out[13]              dff_243                         12.201800 h, n
+EMPC_out[14]              dff_244                         11.732500 h, n
+EMPC_out[15]              dff_245                         11.732500 h, n
+EMRd[0]                   dff_195                         11.732500 h, n
+EMRd[1]                   dff_196                         11.732500 h, n
+EMRd[2]                   dff_197                         11.732500 h, n
+EMbrnch                   dff_393                         11.732500 h, n
+EMhalt                    dff_387                         11.732500 h, n
+EMjmp                     dff_394                         11.732500 h, n
+EMmem_rd                  dff_390                         11.732500 h, n
+EMmem_to_reg              dff_388                         11.732500 h, n
+EMmem_wr                  dff_391                         11.732500 h, n
+EMread2data[0]            dff_214                         11.732500 h, n
+EMread2data[1]            dff_215                         11.732500 h, n
+EMread2data[2]            dff_216                         11.732500 h, n
+EMread2data[3]            dff_217                         11.732500 h, n
+EMread2data[4]            dff_218                         11.732500 h, n
+EMread2data[5]            dff_219                         11.732500 h, n
+EMread2data[6]            dff_220                         11.732500 h, n
+EMread2data[7]            dff_221                         11.732500 h, n
+EMread2data[8]            dff_222                         11.732500 h, n
+EMread2data[9]            dff_223                         11.732500 h, n
+EMread2data[10]           dff_224                         11.732500 h, n
+EMread2data[11]           dff_225                         11.732500 h, n
+EMread2data[12]           dff_226                         11.732500 h, n
+EMread2data[13]           dff_227                         11.732500 h, n
+EMread2data[14]           dff_228                         11.732500 h, n
+EMread2data[15]           dff_229                         11.732500 h, n
+EMreg_wr                  dff_392                         11.732500 h, n
+EMwr_r7                   dff_389                         11.732500 h, n
+FDInstrh[0]               dff_en_27                       15.017600 h, n
+FDInstrh[1]               dff_en_28                       15.017600 h, n
+FDInstrh[2]               dff_en_29                       15.017600 h, n
+FDInstrh[3]               dff_en_30                       15.017600 h, n
+FDInstrl[0]               dff_en_16                       15.017600 h, n
+FDInstrl[1]               dff_en_17                       15.017600 h, n
+FDInstrl[2]               dff_en_18                       15.017600 h, n
+FDInstrl[3]               dff_en_19                       15.017600 h, n
+FDInstrl[4]               dff_en_20                       15.017600 h, n
+FDInstrl[5]               dff_en_21                       15.017600 h, n
+FDInstrl[6]               dff_en_22                       15.017600 h, n
+FDInstrl[7]               dff_en_23                       15.017600 h, n
+FDInstrl[8]               dff_en_24                       15.017600 h, n
+FDInstrl[9]               dff_en_25                       15.017600 h, n
+FDInstrl[10]              dff_en_26                       15.017600 h, n
+FDInstrm                  dff_pre_en                      18.302700 h, n
+FDPC_inc[0]               dff_en_0                        15.017600 h, n
+FDPC_inc[1]               dff_en_1                        15.017600 h, n
+FDPC_inc[2]               dff_en_2                        15.017600 h, n
+FDPC_inc[3]               dff_en_3                        15.017600 h, n
+FDPC_inc[4]               dff_en_4                        15.017600 h, n
+FDPC_inc[5]               dff_en_5                        15.017600 h, n
+FDPC_inc[6]               dff_en_6                        15.017600 h, n
+FDPC_inc[7]               dff_en_7                        15.017600 h, n
+FDPC_inc[8]               dff_en_8                        15.017600 h, n
+FDPC_inc[9]               dff_en_9                        15.017600 h, n
+FDPC_inc[10]              dff_en_10                       15.017600 h, n
+FDPC_inc[11]              dff_en_11                       15.017600 h, n
+FDPC_inc[12]              dff_en_12                       15.017600 h, n
+FDPC_inc[13]              dff_en_13                       14.079000 h, n
+FDPC_inc[14]              dff_en_14                       14.079000 h, n
+FDPC_inc[15]              dff_en_15                       14.079000 h, n
+MWALU_out[0]              dff_163                         11.732500 h, n
+MWALU_out[1]              dff_164                         11.732500 h, n
+MWALU_out[2]              dff_165                         11.732500 h, n
+MWALU_out[3]              dff_166                         11.732500 h, n
+MWALU_out[4]              dff_167                         11.732500 h, n
+MWALU_out[5]              dff_168                         11.732500 h, n
+MWALU_out[6]              dff_169                         11.732500 h, n
+MWALU_out[7]              dff_170                         11.732500 h, n
+MWALU_out[8]              dff_171                         11.732500 h, n
+MWALU_out[9]              dff_172                         11.732500 h, n
+MWALU_out[10]             dff_173                         11.732500 h, n
+MWALU_out[11]             dff_174                         11.732500 h, n
+MWALU_out[12]             dff_175                         11.732500 h, n
+MWALU_out[13]             dff_176                         11.732500 h, n
+MWALU_out[14]             dff_177                         11.732500 h, n
+MWALU_out[15]             dff_178                         11.732500 h, n
+MWPC_inc[0]               dff_179                         11.732500 h, n
+MWPC_inc[1]               dff_180                         11.732500 h, n
+MWPC_inc[2]               dff_181                         11.732500 h, n
+MWPC_inc[3]               dff_182                         11.732500 h, n
+MWPC_inc[4]               dff_183                         11.732500 h, n
+MWPC_inc[5]               dff_184                         11.732500 h, n
+MWPC_inc[6]               dff_185                         11.732500 h, n
+MWPC_inc[7]               dff_186                         11.732500 h, n
+MWPC_inc[8]               dff_187                         11.732500 h, n
+MWPC_inc[9]               dff_188                         11.732500 h, n
+MWPC_inc[10]              dff_189                         11.732500 h, n
+MWPC_inc[11]              dff_190                         11.732500 h, n
+MWPC_inc[12]              dff_191                         11.732500 h, n
+MWPC_inc[13]              dff_192                         11.732500 h, n
+MWPC_inc[14]              dff_193                         11.732500 h, n
+MWPC_inc[15]              dff_194                         11.732500 h, n
+MWRd[0]                   dff_144                         11.732500 h, n
+MWRd[1]                   dff_145                         11.732500 h, n
+MWRd[2]                   dff_146                         11.732500 h, n
+MWhalt                    dff_382                         11.732500 h, n
+MWmem_to_reg              dff_383                         11.732500 h, n
+MWmem_wr                  dff_385                         11.732500 h, n
+MWrd_mem_data[0]          dff_147                         11.732500 h, n
+MWrd_mem_data[1]          dff_148                         11.732500 h, n
+MWrd_mem_data[2]          dff_149                         11.732500 h, n
+MWrd_mem_data[3]          dff_150                         11.732500 h, n
+MWrd_mem_data[4]          dff_151                         11.732500 h, n
+MWrd_mem_data[5]          dff_152                         11.732500 h, n
+MWrd_mem_data[6]          dff_153                         11.732500 h, n
+MWrd_mem_data[7]          dff_154                         11.732500 h, n
+MWrd_mem_data[8]          dff_155                         11.732500 h, n
+MWrd_mem_data[9]          dff_156                         11.732500 h, n
+MWrd_mem_data[10]         dff_157                         11.732500 h, n
+MWrd_mem_data[11]         dff_158                         11.732500 h, n
+MWrd_mem_data[12]         dff_159                         11.732500 h, n
+MWrd_mem_data[13]         dff_160                         11.732500 h, n
+MWrd_mem_data[14]         dff_161                         11.732500 h, n
+MWrd_mem_data[15]         dff_162                         11.732500 h, n
+MWreg_wr                  dff_386                         11.732500 h, n
+MWwr_r7                   dff_384                         11.732500 h, n
+U5                        OR2X1           gscl45nm        2.346500  
+U6                        OR2X1           gscl45nm        2.346500  
+U7                        BUFX2           gscl45nm        2.346500  
+U8                        BUFX2           gscl45nm        2.346500  
+U9                        BUFX2           gscl45nm        2.346500  
+U10                       BUFX2           gscl45nm        2.346500  
+U11                       BUFX2           gscl45nm        2.346500  
+U12                       BUFX2           gscl45nm        2.346500  
+U13                       INVX2           gscl45nm        1.877200  
+U14                       INVX8           gscl45nm        3.285100  
+U15                       BUFX2           gscl45nm        2.346500  
+U16                       BUFX2           gscl45nm        2.346500  
+U17                       BUFX2           gscl45nm        2.346500  
+U18                       BUFX2           gscl45nm        2.346500  
+U19                       BUFX2           gscl45nm        2.346500  
+U20                       BUFX2           gscl45nm        2.346500  
+U21                       BUFX2           gscl45nm        2.346500  
+U22                       BUFX4           gscl45nm        2.815800  
+U23                       INVX1           gscl45nm        1.407900  
+U24                       INVX1           gscl45nm        1.407900  
+U25                       BUFX2           gscl45nm        2.346500  
+U26                       BUFX2           gscl45nm        2.346500  
+U27                       INVX1           gscl45nm        1.407900  
+U28                       INVX1           gscl45nm        1.407900  
+U29                       INVX1           gscl45nm        1.407900  
+U30                       INVX1           gscl45nm        1.407900  
+U31                       INVX1           gscl45nm        1.407900  
+U32                       INVX1           gscl45nm        1.407900  
+U33                       INVX1           gscl45nm        1.407900  
+U34                       INVX1           gscl45nm        1.407900  
+U35                       INVX1           gscl45nm        1.407900  
+U36                       INVX1           gscl45nm        1.407900  
+U37                       INVX1           gscl45nm        1.407900  
+U38                       INVX1           gscl45nm        1.407900  
+U39                       INVX1           gscl45nm        1.407900  
+U40                       INVX1           gscl45nm        1.407900  
+U41                       INVX1           gscl45nm        1.407900  
+U43                       BUFX2           gscl45nm        2.346500  
+frwrd                     forwarding_unit                 129.996097
+                                                                    h
+hazard_unit               hdu                             263.277295
+                                                                    h
+iDEC                      decode                          3624.403832
+                                                                    h, n
+iEX                       execute                         5001.799326
+                                                                    h
+iFET                      fetch                           14899.805431
+                                                                    h, n
+iMEM                      memory                          13105.671575
+                                                                    h, n
+iWR                       write                           267.031696
+                                                                    h
+--------------------------------------------------------------------------------
+Total 338 cells                                           40916.858367
+1

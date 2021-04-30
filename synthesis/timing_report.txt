@@ -1,0 +1,1842 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : proc
+Version: Q-2019.12-SP3
+Date   : Sat Apr 10 20:20:41 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: EMRd[1]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMPC_out[13]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[1]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[1]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[1]/q (dff_196)                                     0.00       0.11 f
+  frwrd/em_write_reg<1> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U9/Y (XNOR2X1)                                    0.05       0.16 r
+  frwrd/U22/Y (OR2X2)                                     0.05       0.20 r
+  frwrd/U23/Y (INVX1)                                     0.02       0.22 f
+  frwrd/U27/Y (AND2X2)                                    0.04       0.26 f
+  frwrd/U28/Y (INVX1)                                     0.00       0.25 r
+  frwrd/U38/Y (AND2X2)                                    0.04       0.30 r
+  frwrd/frwrd_sel_A<1> (forwarding_unit)                  0.00       0.30 r
+  iEX/frwrd_sel_A<1> (execute)                            0.00       0.30 r
+  iEX/U27/Y (BUFX4)                                       0.03       0.32 r
+  iEX/U256/Y (OAI21X1)                                    0.02       0.35 f
+  iEX/iALU/A<2> (alu)                                     0.00       0.35 f
+  iEX/iALU/U48/Y (INVX1)                                  0.00       0.35 r
+  iEX/iALU/neg_adder/A<2> (cla16_1)                       0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/A<2> (cla4_7)                 0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/U1/Y (INVX1)                  0.01       0.36 f
+  iEX/iALU/neg_adder/cla4_1/U6/Y (AND2X2)                 0.03       0.40 f
+  iEX/iALU/neg_adder/cla4_1/U66/Y (OAI21X1)               0.04       0.43 r
+  iEX/iALU/neg_adder/cla4_1/U12/Y (AND2X2)                0.03       0.46 r
+  iEX/iALU/neg_adder/cla4_1/U13/Y (INVX1)                 0.02       0.48 f
+  iEX/iALU/neg_adder/cla4_1/U33/Y (NOR2X1)                0.03       0.51 r
+  iEX/iALU/neg_adder/cla4_1/Cout (cla4_7)                 0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/Cin (cla4_6)                  0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/U24/Y (BUFX2)                 0.04       0.54 r
+  iEX/iALU/neg_adder/cla4_2/U85/Y (INVX1)                 0.02       0.56 f
+  iEX/iALU/neg_adder/cla4_2/U90/Y (AOI22X1)               0.04       0.60 r
+  iEX/iALU/neg_adder/cla4_2/U30/Y (BUFX2)                 0.04       0.64 r
+  iEX/iALU/neg_adder/cla4_2/Cout (cla4_6)                 0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/Cin (cla4_5)                  0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/U80/Y (NAND3X1)               0.01       0.65 f
+  iEX/iALU/neg_adder/cla4_3/U17/Y (BUFX2)                 0.03       0.69 f
+  iEX/iALU/neg_adder/cla4_3/U81/Y (NAND3X1)               0.03       0.71 r
+  iEX/iALU/neg_adder/cla4_3/S<2> (cla4_5)                 0.00       0.71 r
+  iEX/iALU/neg_adder/U3/Y (BUFX2)                         0.03       0.75 r
+  iEX/iALU/neg_adder/S<10> (cla16_1)                      0.00       0.75 r
+  iEX/iALU/U68/Y (AND2X2)                                 0.03       0.78 r
+  iEX/iALU/U69/Y (INVX1)                                  0.01       0.79 f
+  iEX/iALU/U388/Y (OAI21X1)                               0.03       0.82 r
+  iEX/iALU/adder/A<10> (cla16_0)                          0.00       0.82 r
+  iEX/iALU/adder/cla4_3/A<2> (cla4_1)                     0.00       0.82 r
+  iEX/iALU/adder/cla4_3/U67/Y (AOI21X1)                   0.02       0.84 f
+  iEX/iALU/adder/cla4_3/U24/Y (BUFX2)                     0.03       0.88 f
+  iEX/iALU/adder/cla4_3/U68/Y (AOI21X1)                   0.03       0.91 r
+  iEX/iALU/adder/cla4_3/U39/Y (BUFX2)                     0.04       0.95 r
+  iEX/iALU/adder/cla4_3/U25/Y (AND2X2)                    0.03       0.98 r
+  iEX/iALU/adder/cla4_3/U26/Y (INVX1)                     0.02       0.99 f
+  iEX/iALU/adder/cla4_3/U71/Y (OAI21X1)                   0.04       1.04 r
+  iEX/iALU/adder/cla4_3/Cout (cla4_1)                     0.00       1.04 r
+  iEX/iALU/adder/cla4_4/Cin (cla4_0)                      0.00       1.04 r
+  iEX/iALU/adder/cla4_4/U1/Y (INVX2)                      0.02       1.06 f
+  iEX/iALU/adder/cla4_4/U24/Y (INVX1)                     0.01       1.07 r
+  iEX/iALU/adder/cla4_4/U29/Y (NOR3X1)                    0.02       1.08 f
+  iEX/iALU/adder/cla4_4/U30/Y (INVX1)                     0.01       1.09 r
+  iEX/iALU/adder/cla4_4/U92/Y (NAND3X1)                   0.01       1.10 f
+  iEX/iALU/adder/cla4_4/S<1> (cla4_0)                     0.00       1.10 f
+  iEX/iALU/adder/S<13> (cla16_0)                          0.00       1.10 f
+  iEX/iALU/U145/Y (BUFX2)                                 0.04       1.13 f
+  iEX/iALU/U408/Y (AOI21X1)                               0.03       1.16 r
+  iEX/iALU/U109/Y (AND2X2)                                0.03       1.19 r
+  iEX/iALU/U110/Y (INVX1)                                 0.02       1.21 f
+  iEX/iALU/Out<13> (alu)                                  0.00       1.21 f
+  iEX/U119/Y (AOI22X1)                                    0.03       1.24 r
+  iEX/U58/Y (BUFX2)                                       0.03       1.28 r
+  iEX/U328/Y (NAND2X1)                                    0.01       1.29 f
+  iEX/PC_out<13> (execute)                                0.00       1.29 f
+  EMPC_out[13]/d (dff_243)                                0.00       1.29 f
+  EMPC_out[13]/U3/Y (AND2X2)                              0.03       1.32 f
+  EMPC_out[13]/state_reg/D (DFFPOSX1)                     0.00       1.32 f
+  data arrival time                                                  1.32
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMPC_out[13]/state_reg/CLK (DFFPOSX1)                   0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.32
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.39
+
+
+  Startpoint: EMRd[1]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMPC_out[0]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[1]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[1]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[1]/q (dff_196)                                     0.00       0.11 f
+  frwrd/em_write_reg<1> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U9/Y (XNOR2X1)                                    0.05       0.16 r
+  frwrd/U22/Y (OR2X2)                                     0.05       0.20 r
+  frwrd/U23/Y (INVX1)                                     0.02       0.22 f
+  frwrd/U27/Y (AND2X2)                                    0.04       0.26 f
+  frwrd/U28/Y (INVX1)                                     0.00       0.25 r
+  frwrd/U38/Y (AND2X2)                                    0.04       0.30 r
+  frwrd/frwrd_sel_A<1> (forwarding_unit)                  0.00       0.30 r
+  iEX/frwrd_sel_A<1> (execute)                            0.00       0.30 r
+  iEX/U27/Y (BUFX4)                                       0.03       0.32 r
+  iEX/U256/Y (OAI21X1)                                    0.02       0.35 f
+  iEX/iALU/A<2> (alu)                                     0.00       0.35 f
+  iEX/iALU/U48/Y (INVX1)                                  0.00       0.35 r
+  iEX/iALU/neg_adder/A<2> (cla16_1)                       0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/A<2> (cla4_7)                 0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/U1/Y (INVX1)                  0.01       0.36 f
+  iEX/iALU/neg_adder/cla4_1/U6/Y (AND2X2)                 0.03       0.40 f
+  iEX/iALU/neg_adder/cla4_1/U66/Y (OAI21X1)               0.04       0.43 r
+  iEX/iALU/neg_adder/cla4_1/U12/Y (AND2X2)                0.03       0.46 r
+  iEX/iALU/neg_adder/cla4_1/U13/Y (INVX1)                 0.02       0.48 f
+  iEX/iALU/neg_adder/cla4_1/U33/Y (NOR2X1)                0.03       0.51 r
+  iEX/iALU/neg_adder/cla4_1/Cout (cla4_7)                 0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/Cin (cla4_6)                  0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/U24/Y (BUFX2)                 0.04       0.54 r
+  iEX/iALU/neg_adder/cla4_2/U85/Y (INVX1)                 0.02       0.56 f
+  iEX/iALU/neg_adder/cla4_2/U90/Y (AOI22X1)               0.04       0.60 r
+  iEX/iALU/neg_adder/cla4_2/U30/Y (BUFX2)                 0.04       0.64 r
+  iEX/iALU/neg_adder/cla4_2/Cout (cla4_6)                 0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/Cin (cla4_5)                  0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/U80/Y (NAND3X1)               0.01       0.65 f
+  iEX/iALU/neg_adder/cla4_3/U17/Y (BUFX2)                 0.03       0.69 f
+  iEX/iALU/neg_adder/cla4_3/U81/Y (NAND3X1)               0.03       0.71 r
+  iEX/iALU/neg_adder/cla4_3/S<2> (cla4_5)                 0.00       0.71 r
+  iEX/iALU/neg_adder/U3/Y (BUFX2)                         0.03       0.75 r
+  iEX/iALU/neg_adder/S<10> (cla16_1)                      0.00       0.75 r
+  iEX/iALU/U68/Y (AND2X2)                                 0.03       0.78 r
+  iEX/iALU/U69/Y (INVX1)                                  0.01       0.79 f
+  iEX/iALU/U388/Y (OAI21X1)                               0.03       0.82 r
+  iEX/iALU/adder/A<10> (cla16_0)                          0.00       0.82 r
+  iEX/iALU/adder/cla4_3/A<2> (cla4_1)                     0.00       0.82 r
+  iEX/iALU/adder/cla4_3/U67/Y (AOI21X1)                   0.02       0.84 f
+  iEX/iALU/adder/cla4_3/U24/Y (BUFX2)                     0.03       0.88 f
+  iEX/iALU/adder/cla4_3/U68/Y (AOI21X1)                   0.03       0.91 r
+  iEX/iALU/adder/cla4_3/U39/Y (BUFX2)                     0.04       0.95 r
+  iEX/iALU/adder/cla4_3/U25/Y (AND2X2)                    0.03       0.98 r
+  iEX/iALU/adder/cla4_3/U26/Y (INVX1)                     0.02       0.99 f
+  iEX/iALU/adder/cla4_3/U71/Y (OAI21X1)                   0.04       1.04 r
+  iEX/iALU/adder/cla4_3/Cout (cla4_1)                     0.00       1.04 r
+  iEX/iALU/adder/cla4_4/Cin (cla4_0)                      0.00       1.04 r
+  iEX/iALU/adder/cla4_4/U1/Y (INVX2)                      0.02       1.06 f
+  iEX/iALU/adder/cla4_4/U17/Y (INVX1)                     0.01       1.07 r
+  iEX/iALU/adder/cla4_4/U27/Y (NOR3X1)                    0.02       1.08 f
+  iEX/iALU/adder/cla4_4/U28/Y (INVX1)                     0.01       1.09 r
+  iEX/iALU/adder/cla4_4/U59/Y (NAND3X1)                   0.01       1.10 f
+  iEX/iALU/adder/cla4_4/S<2> (cla4_0)                     0.00       1.10 f
+  iEX/iALU/adder/S<14> (cla16_0)                          0.00       1.10 f
+  iEX/iALU/U144/Y (BUFX2)                                 0.03       1.13 f
+  iEX/iALU/U270/Y (INVX1)                                 0.00       1.13 r
+  iEX/iALU/U267/Y (NAND3X1)                               0.01       1.14 f
+  iEX/iALU/U271/Y (INVX1)                                 0.00       1.14 r
+  iEX/iALU/U98/Y (AND2X2)                                 0.03       1.17 r
+  iEX/iALU/U99/Y (INVX1)                                  0.02       1.19 f
+  iEX/iALU/U96/Y (OR2X2)                                  0.04       1.23 f
+  iEX/iALU/U97/Y (INVX1)                                  0.00       1.23 r
+  iEX/iALU/U325/Y (NOR2X1)                                0.01       1.23 f
+  iEX/iALU/U265/Y (INVX1)                                 0.00       1.23 r
+  iEX/iALU/U262/Y (OAI21X1)                               0.01       1.24 f
+  iEX/iALU/U266/Y (INVX1)                                 0.00       1.24 r
+  iEX/iALU/U133/Y (AND2X2)                                0.03       1.27 r
+  iEX/iALU/U134/Y (INVX1)                                 0.02       1.29 f
+  iEX/iALU/Out<0> (alu)                                   0.00       1.29 f
+  iEX/U30/Y (INVX1)                                       0.00       1.29 r
+  iEX/U121/Y (OAI21X1)                                    0.01       1.30 f
+  iEX/PC_out<0> (execute)                                 0.00       1.30 f
+  EMPC_out[0]/d (dff_230)                                 0.00       1.30 f
+  EMPC_out[0]/U3/Y (AND2X1)                               0.03       1.33 f
+  EMPC_out[0]/state_reg/D (DFFPOSX1)                      0.00       1.33 f
+  data arrival time                                                  1.33
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMPC_out[0]/state_reg/CLK (DFFPOSX1)                    0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.33
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.39
+
+
+  Startpoint: EMRd[1]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMPC_out[12]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[1]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[1]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[1]/q (dff_196)                                     0.00       0.11 f
+  frwrd/em_write_reg<1> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U9/Y (XNOR2X1)                                    0.05       0.16 r
+  frwrd/U22/Y (OR2X2)                                     0.05       0.20 r
+  frwrd/U23/Y (INVX1)                                     0.02       0.22 f
+  frwrd/U27/Y (AND2X2)                                    0.04       0.26 f
+  frwrd/U28/Y (INVX1)                                     0.00       0.25 r
+  frwrd/U38/Y (AND2X2)                                    0.04       0.30 r
+  frwrd/frwrd_sel_A<1> (forwarding_unit)                  0.00       0.30 r
+  iEX/frwrd_sel_A<1> (execute)                            0.00       0.30 r
+  iEX/U27/Y (BUFX4)                                       0.03       0.32 r
+  iEX/U256/Y (OAI21X1)                                    0.02       0.35 f
+  iEX/iALU/A<2> (alu)                                     0.00       0.35 f
+  iEX/iALU/U48/Y (INVX1)                                  0.00       0.35 r
+  iEX/iALU/neg_adder/A<2> (cla16_1)                       0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/A<2> (cla4_7)                 0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/U1/Y (INVX1)                  0.01       0.36 f
+  iEX/iALU/neg_adder/cla4_1/U6/Y (AND2X2)                 0.03       0.40 f
+  iEX/iALU/neg_adder/cla4_1/U66/Y (OAI21X1)               0.04       0.43 r
+  iEX/iALU/neg_adder/cla4_1/U12/Y (AND2X2)                0.03       0.46 r
+  iEX/iALU/neg_adder/cla4_1/U13/Y (INVX1)                 0.02       0.48 f
+  iEX/iALU/neg_adder/cla4_1/U33/Y (NOR2X1)                0.03       0.51 r
+  iEX/iALU/neg_adder/cla4_1/Cout (cla4_7)                 0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/Cin (cla4_6)                  0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/U24/Y (BUFX2)                 0.04       0.54 r
+  iEX/iALU/neg_adder/cla4_2/U85/Y (INVX1)                 0.02       0.56 f
+  iEX/iALU/neg_adder/cla4_2/U90/Y (AOI22X1)               0.04       0.60 r
+  iEX/iALU/neg_adder/cla4_2/U30/Y (BUFX2)                 0.04       0.64 r
+  iEX/iALU/neg_adder/cla4_2/Cout (cla4_6)                 0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/Cin (cla4_5)                  0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/U80/Y (NAND3X1)               0.01       0.65 f
+  iEX/iALU/neg_adder/cla4_3/U17/Y (BUFX2)                 0.03       0.69 f
+  iEX/iALU/neg_adder/cla4_3/U81/Y (NAND3X1)               0.03       0.71 r
+  iEX/iALU/neg_adder/cla4_3/S<2> (cla4_5)                 0.00       0.71 r
+  iEX/iALU/neg_adder/U3/Y (BUFX2)                         0.03       0.75 r
+  iEX/iALU/neg_adder/S<10> (cla16_1)                      0.00       0.75 r
+  iEX/iALU/U68/Y (AND2X2)                                 0.03       0.78 r
+  iEX/iALU/U69/Y (INVX1)                                  0.01       0.79 f
+  iEX/iALU/U388/Y (OAI21X1)                               0.03       0.82 r
+  iEX/iALU/adder/A<10> (cla16_0)                          0.00       0.82 r
+  iEX/iALU/adder/cla4_3/A<2> (cla4_1)                     0.00       0.82 r
+  iEX/iALU/adder/cla4_3/U67/Y (AOI21X1)                   0.02       0.84 f
+  iEX/iALU/adder/cla4_3/U24/Y (BUFX2)                     0.03       0.88 f
+  iEX/iALU/adder/cla4_3/U68/Y (AOI21X1)                   0.03       0.91 r
+  iEX/iALU/adder/cla4_3/U39/Y (BUFX2)                     0.04       0.95 r
+  iEX/iALU/adder/cla4_3/U25/Y (AND2X2)                    0.03       0.98 r
+  iEX/iALU/adder/cla4_3/U26/Y (INVX1)                     0.02       0.99 f
+  iEX/iALU/adder/cla4_3/U71/Y (OAI21X1)                   0.04       1.04 r
+  iEX/iALU/adder/cla4_3/Cout (cla4_1)                     0.00       1.04 r
+  iEX/iALU/adder/cla4_4/Cin (cla4_0)                      0.00       1.04 r
+  iEX/iALU/adder/cla4_4/U1/Y (INVX2)                      0.02       1.06 f
+  iEX/iALU/adder/cla4_4/U25/Y (INVX1)                     0.01       1.07 r
+  iEX/iALU/adder/cla4_4/U8/Y (INVX1)                      0.02       1.09 f
+  iEX/iALU/adder/cla4_4/U18/Y (XNOR2X1)                   0.03       1.12 f
+  iEX/iALU/adder/cla4_4/S<0> (cla4_0)                     0.00       1.12 f
+  iEX/iALU/adder/S<12> (cla16_0)                          0.00       1.12 f
+  iEX/iALU/U50/Y (AND2X1)                                 0.03       1.15 f
+  iEX/iALU/U61/Y (INVX1)                                  0.00       1.15 r
+  iEX/iALU/U160/Y (AND2X2)                                0.03       1.19 r
+  iEX/iALU/U106/Y (AND2X2)                                0.03       1.22 r
+  iEX/iALU/U107/Y (INVX1)                                 0.02       1.23 f
+  iEX/iALU/Out<12> (alu)                                  0.00       1.23 f
+  iEX/U19/Y (AND2X1)                                      0.03       1.27 f
+  iEX/U69/Y (INVX1)                                       0.00       1.27 r
+  iEX/U28/Y (NAND2X1)                                     0.01       1.27 f
+  iEX/PC_out<12> (execute)                                0.00       1.27 f
+  EMPC_out[12]/d (dff_242)                                0.00       1.27 f
+  EMPC_out[12]/U3/Y (AND2X2)                              0.03       1.31 f
+  EMPC_out[12]/state_reg/D (DFFPOSX1)                     0.00       1.31 f
+  data arrival time                                                  1.31
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMPC_out[12]/state_reg/CLK (DFFPOSX1)                   0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.31
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.37
+
+
+  Startpoint: EMRd[1]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMALU_out[0]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[1]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[1]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[1]/q (dff_196)                                     0.00       0.11 f
+  frwrd/em_write_reg<1> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U9/Y (XNOR2X1)                                    0.05       0.16 r
+  frwrd/U22/Y (OR2X2)                                     0.05       0.20 r
+  frwrd/U23/Y (INVX1)                                     0.02       0.22 f
+  frwrd/U27/Y (AND2X2)                                    0.04       0.26 f
+  frwrd/U28/Y (INVX1)                                     0.00       0.25 r
+  frwrd/U38/Y (AND2X2)                                    0.04       0.30 r
+  frwrd/frwrd_sel_A<1> (forwarding_unit)                  0.00       0.30 r
+  iEX/frwrd_sel_A<1> (execute)                            0.00       0.30 r
+  iEX/U27/Y (BUFX4)                                       0.03       0.32 r
+  iEX/U256/Y (OAI21X1)                                    0.02       0.35 f
+  iEX/iALU/A<2> (alu)                                     0.00       0.35 f
+  iEX/iALU/U48/Y (INVX1)                                  0.00       0.35 r
+  iEX/iALU/neg_adder/A<2> (cla16_1)                       0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/A<2> (cla4_7)                 0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/U1/Y (INVX1)                  0.01       0.36 f
+  iEX/iALU/neg_adder/cla4_1/U6/Y (AND2X2)                 0.03       0.40 f
+  iEX/iALU/neg_adder/cla4_1/U66/Y (OAI21X1)               0.04       0.43 r
+  iEX/iALU/neg_adder/cla4_1/U12/Y (AND2X2)                0.03       0.46 r
+  iEX/iALU/neg_adder/cla4_1/U13/Y (INVX1)                 0.02       0.48 f
+  iEX/iALU/neg_adder/cla4_1/U33/Y (NOR2X1)                0.03       0.51 r
+  iEX/iALU/neg_adder/cla4_1/Cout (cla4_7)                 0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/Cin (cla4_6)                  0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/U24/Y (BUFX2)                 0.04       0.54 r
+  iEX/iALU/neg_adder/cla4_2/U85/Y (INVX1)                 0.02       0.56 f
+  iEX/iALU/neg_adder/cla4_2/U90/Y (AOI22X1)               0.04       0.60 r
+  iEX/iALU/neg_adder/cla4_2/U30/Y (BUFX2)                 0.04       0.64 r
+  iEX/iALU/neg_adder/cla4_2/Cout (cla4_6)                 0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/Cin (cla4_5)                  0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/U80/Y (NAND3X1)               0.01       0.65 f
+  iEX/iALU/neg_adder/cla4_3/U17/Y (BUFX2)                 0.03       0.69 f
+  iEX/iALU/neg_adder/cla4_3/U81/Y (NAND3X1)               0.03       0.71 r
+  iEX/iALU/neg_adder/cla4_3/S<2> (cla4_5)                 0.00       0.71 r
+  iEX/iALU/neg_adder/U3/Y (BUFX2)                         0.03       0.75 r
+  iEX/iALU/neg_adder/S<10> (cla16_1)                      0.00       0.75 r
+  iEX/iALU/U68/Y (AND2X2)                                 0.03       0.78 r
+  iEX/iALU/U69/Y (INVX1)                                  0.01       0.79 f
+  iEX/iALU/U388/Y (OAI21X1)                               0.03       0.82 r
+  iEX/iALU/adder/A<10> (cla16_0)                          0.00       0.82 r
+  iEX/iALU/adder/cla4_3/A<2> (cla4_1)                     0.00       0.82 r
+  iEX/iALU/adder/cla4_3/U67/Y (AOI21X1)                   0.02       0.84 f
+  iEX/iALU/adder/cla4_3/U24/Y (BUFX2)                     0.03       0.88 f
+  iEX/iALU/adder/cla4_3/U68/Y (AOI21X1)                   0.03       0.91 r
+  iEX/iALU/adder/cla4_3/U39/Y (BUFX2)                     0.04       0.95 r
+  iEX/iALU/adder/cla4_3/U25/Y (AND2X2)                    0.03       0.98 r
+  iEX/iALU/adder/cla4_3/U26/Y (INVX1)                     0.02       0.99 f
+  iEX/iALU/adder/cla4_3/U71/Y (OAI21X1)                   0.04       1.04 r
+  iEX/iALU/adder/cla4_3/Cout (cla4_1)                     0.00       1.04 r
+  iEX/iALU/adder/cla4_4/Cin (cla4_0)                      0.00       1.04 r
+  iEX/iALU/adder/cla4_4/U1/Y (INVX2)                      0.02       1.06 f
+  iEX/iALU/adder/cla4_4/U17/Y (INVX1)                     0.01       1.07 r
+  iEX/iALU/adder/cla4_4/U27/Y (NOR3X1)                    0.02       1.08 f
+  iEX/iALU/adder/cla4_4/U28/Y (INVX1)                     0.01       1.09 r
+  iEX/iALU/adder/cla4_4/U59/Y (NAND3X1)                   0.01       1.10 f
+  iEX/iALU/adder/cla4_4/S<2> (cla4_0)                     0.00       1.10 f
+  iEX/iALU/adder/S<14> (cla16_0)                          0.00       1.10 f
+  iEX/iALU/U144/Y (BUFX2)                                 0.03       1.13 f
+  iEX/iALU/U270/Y (INVX1)                                 0.00       1.13 r
+  iEX/iALU/U267/Y (NAND3X1)                               0.01       1.14 f
+  iEX/iALU/U271/Y (INVX1)                                 0.00       1.14 r
+  iEX/iALU/U98/Y (AND2X2)                                 0.03       1.17 r
+  iEX/iALU/U99/Y (INVX1)                                  0.02       1.19 f
+  iEX/iALU/U96/Y (OR2X2)                                  0.04       1.23 f
+  iEX/iALU/U97/Y (INVX1)                                  0.00       1.23 r
+  iEX/iALU/U325/Y (NOR2X1)                                0.01       1.23 f
+  iEX/iALU/U265/Y (INVX1)                                 0.00       1.23 r
+  iEX/iALU/U262/Y (OAI21X1)                               0.01       1.24 f
+  iEX/iALU/U266/Y (INVX1)                                 0.00       1.24 r
+  iEX/iALU/U133/Y (AND2X2)                                0.03       1.27 r
+  iEX/iALU/U134/Y (INVX1)                                 0.02       1.29 f
+  iEX/iALU/Out<0> (alu)                                   0.00       1.29 f
+  iEX/U3/Y (INVX1)                                        0.00       1.29 r
+  iEX/U4/Y (INVX1)                                        0.01       1.30 f
+  iEX/ALU_out<0> (execute)                                0.00       1.30 f
+  EMALU_out[0]/d (dff_198)                                0.00       1.30 f
+  EMALU_out[0]/U3/Y (INVX1)                               0.00       1.30 r
+  EMALU_out[0]/U4/Y (NOR2X1)                              0.01       1.31 f
+  EMALU_out[0]/state_reg/D (DFFPOSX1)                     0.00       1.31 f
+  data arrival time                                                  1.31
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMALU_out[0]/state_reg/CLK (DFFPOSX1)                   0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.31
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.37
+
+
+  Startpoint: EMRd[1]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMPC_out[14]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[1]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[1]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[1]/q (dff_196)                                     0.00       0.11 f
+  frwrd/em_write_reg<1> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U9/Y (XNOR2X1)                                    0.05       0.16 r
+  frwrd/U22/Y (OR2X2)                                     0.05       0.20 r
+  frwrd/U23/Y (INVX1)                                     0.02       0.22 f
+  frwrd/U27/Y (AND2X2)                                    0.04       0.26 f
+  frwrd/U28/Y (INVX1)                                     0.00       0.25 r
+  frwrd/U38/Y (AND2X2)                                    0.04       0.30 r
+  frwrd/frwrd_sel_A<1> (forwarding_unit)                  0.00       0.30 r
+  iEX/frwrd_sel_A<1> (execute)                            0.00       0.30 r
+  iEX/U27/Y (BUFX4)                                       0.03       0.32 r
+  iEX/U256/Y (OAI21X1)                                    0.02       0.35 f
+  iEX/iALU/A<2> (alu)                                     0.00       0.35 f
+  iEX/iALU/U48/Y (INVX1)                                  0.00       0.35 r
+  iEX/iALU/neg_adder/A<2> (cla16_1)                       0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/A<2> (cla4_7)                 0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/U1/Y (INVX1)                  0.01       0.36 f
+  iEX/iALU/neg_adder/cla4_1/U6/Y (AND2X2)                 0.03       0.40 f
+  iEX/iALU/neg_adder/cla4_1/U66/Y (OAI21X1)               0.04       0.43 r
+  iEX/iALU/neg_adder/cla4_1/U12/Y (AND2X2)                0.03       0.46 r
+  iEX/iALU/neg_adder/cla4_1/U13/Y (INVX1)                 0.02       0.48 f
+  iEX/iALU/neg_adder/cla4_1/U33/Y (NOR2X1)                0.03       0.51 r
+  iEX/iALU/neg_adder/cla4_1/Cout (cla4_7)                 0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/Cin (cla4_6)                  0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/U24/Y (BUFX2)                 0.04       0.54 r
+  iEX/iALU/neg_adder/cla4_2/U85/Y (INVX1)                 0.02       0.56 f
+  iEX/iALU/neg_adder/cla4_2/U90/Y (AOI22X1)               0.04       0.60 r
+  iEX/iALU/neg_adder/cla4_2/U30/Y (BUFX2)                 0.04       0.64 r
+  iEX/iALU/neg_adder/cla4_2/Cout (cla4_6)                 0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/Cin (cla4_5)                  0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/U80/Y (NAND3X1)               0.01       0.65 f
+  iEX/iALU/neg_adder/cla4_3/U17/Y (BUFX2)                 0.03       0.69 f
+  iEX/iALU/neg_adder/cla4_3/U81/Y (NAND3X1)               0.03       0.71 r
+  iEX/iALU/neg_adder/cla4_3/S<2> (cla4_5)                 0.00       0.71 r
+  iEX/iALU/neg_adder/U3/Y (BUFX2)                         0.03       0.75 r
+  iEX/iALU/neg_adder/S<10> (cla16_1)                      0.00       0.75 r
+  iEX/iALU/U68/Y (AND2X2)                                 0.03       0.78 r
+  iEX/iALU/U69/Y (INVX1)                                  0.01       0.79 f
+  iEX/iALU/U388/Y (OAI21X1)                               0.03       0.82 r
+  iEX/iALU/adder/A<10> (cla16_0)                          0.00       0.82 r
+  iEX/iALU/adder/cla4_3/A<2> (cla4_1)                     0.00       0.82 r
+  iEX/iALU/adder/cla4_3/U67/Y (AOI21X1)                   0.02       0.84 f
+  iEX/iALU/adder/cla4_3/U24/Y (BUFX2)                     0.03       0.88 f
+  iEX/iALU/adder/cla4_3/U68/Y (AOI21X1)                   0.03       0.91 r
+  iEX/iALU/adder/cla4_3/U39/Y (BUFX2)                     0.04       0.95 r
+  iEX/iALU/adder/cla4_3/U25/Y (AND2X2)                    0.03       0.98 r
+  iEX/iALU/adder/cla4_3/U26/Y (INVX1)                     0.02       0.99 f
+  iEX/iALU/adder/cla4_3/U71/Y (OAI21X1)                   0.04       1.04 r
+  iEX/iALU/adder/cla4_3/Cout (cla4_1)                     0.00       1.04 r
+  iEX/iALU/adder/cla4_4/Cin (cla4_0)                      0.00       1.04 r
+  iEX/iALU/adder/cla4_4/U1/Y (INVX2)                      0.02       1.06 f
+  iEX/iALU/adder/cla4_4/U17/Y (INVX1)                     0.01       1.07 r
+  iEX/iALU/adder/cla4_4/U27/Y (NOR3X1)                    0.02       1.08 f
+  iEX/iALU/adder/cla4_4/U28/Y (INVX1)                     0.01       1.09 r
+  iEX/iALU/adder/cla4_4/U59/Y (NAND3X1)                   0.01       1.10 f
+  iEX/iALU/adder/cla4_4/S<2> (cla4_0)                     0.00       1.10 f
+  iEX/iALU/adder/S<14> (cla16_0)                          0.00       1.10 f
+  iEX/iALU/U144/Y (BUFX2)                                 0.03       1.13 f
+  iEX/iALU/U3/Y (BUFX2)                                   0.03       1.17 f
+  iEX/iALU/U401/Y (AOI22X1)                               0.04       1.20 r
+  iEX/iALU/U136/Y (AND2X2)                                0.04       1.24 r
+  iEX/iALU/U8/Y (INVX1)                                   0.02       1.25 f
+  iEX/iALU/Out<14> (alu)                                  0.00       1.25 f
+  iEX/U22/Y (AND2X1)                                      0.03       1.29 f
+  iEX/U70/Y (INVX1)                                       0.00       1.29 r
+  iEX/U20/Y (NAND2X1)                                     0.01       1.29 f
+  iEX/PC_out<14> (execute)                                0.00       1.29 f
+  EMPC_out[14]/d (dff_244)                                0.00       1.29 f
+  EMPC_out[14]/U4/Y (INVX1)                               0.00       1.30 r
+  EMPC_out[14]/U3/Y (NOR2X1)                              0.01       1.31 f
+  EMPC_out[14]/state_reg/D (DFFPOSX1)                     0.00       1.31 f
+  data arrival time                                                  1.31
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMPC_out[14]/state_reg/CLK (DFFPOSX1)                   0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.31
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.36
+
+
+  Startpoint: EMRd[1]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMALU_out[12]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[1]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[1]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[1]/q (dff_196)                                     0.00       0.11 f
+  frwrd/em_write_reg<1> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U9/Y (XNOR2X1)                                    0.05       0.16 r
+  frwrd/U22/Y (OR2X2)                                     0.05       0.20 r
+  frwrd/U23/Y (INVX1)                                     0.02       0.22 f
+  frwrd/U27/Y (AND2X2)                                    0.04       0.26 f
+  frwrd/U28/Y (INVX1)                                     0.00       0.25 r
+  frwrd/U38/Y (AND2X2)                                    0.04       0.30 r
+  frwrd/frwrd_sel_A<1> (forwarding_unit)                  0.00       0.30 r
+  iEX/frwrd_sel_A<1> (execute)                            0.00       0.30 r
+  iEX/U27/Y (BUFX4)                                       0.03       0.32 r
+  iEX/U256/Y (OAI21X1)                                    0.02       0.35 f
+  iEX/iALU/A<2> (alu)                                     0.00       0.35 f
+  iEX/iALU/U48/Y (INVX1)                                  0.00       0.35 r
+  iEX/iALU/neg_adder/A<2> (cla16_1)                       0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/A<2> (cla4_7)                 0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/U1/Y (INVX1)                  0.01       0.36 f
+  iEX/iALU/neg_adder/cla4_1/U6/Y (AND2X2)                 0.03       0.40 f
+  iEX/iALU/neg_adder/cla4_1/U66/Y (OAI21X1)               0.04       0.43 r
+  iEX/iALU/neg_adder/cla4_1/U12/Y (AND2X2)                0.03       0.46 r
+  iEX/iALU/neg_adder/cla4_1/U13/Y (INVX1)                 0.02       0.48 f
+  iEX/iALU/neg_adder/cla4_1/U33/Y (NOR2X1)                0.03       0.51 r
+  iEX/iALU/neg_adder/cla4_1/Cout (cla4_7)                 0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/Cin (cla4_6)                  0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/U24/Y (BUFX2)                 0.04       0.54 r
+  iEX/iALU/neg_adder/cla4_2/U85/Y (INVX1)                 0.02       0.56 f
+  iEX/iALU/neg_adder/cla4_2/U90/Y (AOI22X1)               0.04       0.60 r
+  iEX/iALU/neg_adder/cla4_2/U30/Y (BUFX2)                 0.04       0.64 r
+  iEX/iALU/neg_adder/cla4_2/Cout (cla4_6)                 0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/Cin (cla4_5)                  0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/U80/Y (NAND3X1)               0.01       0.65 f
+  iEX/iALU/neg_adder/cla4_3/U17/Y (BUFX2)                 0.03       0.69 f
+  iEX/iALU/neg_adder/cla4_3/U81/Y (NAND3X1)               0.03       0.71 r
+  iEX/iALU/neg_adder/cla4_3/S<2> (cla4_5)                 0.00       0.71 r
+  iEX/iALU/neg_adder/U3/Y (BUFX2)                         0.03       0.75 r
+  iEX/iALU/neg_adder/S<10> (cla16_1)                      0.00       0.75 r
+  iEX/iALU/U68/Y (AND2X2)                                 0.03       0.78 r
+  iEX/iALU/U69/Y (INVX1)                                  0.01       0.79 f
+  iEX/iALU/U388/Y (OAI21X1)                               0.03       0.82 r
+  iEX/iALU/adder/A<10> (cla16_0)                          0.00       0.82 r
+  iEX/iALU/adder/cla4_3/A<2> (cla4_1)                     0.00       0.82 r
+  iEX/iALU/adder/cla4_3/U67/Y (AOI21X1)                   0.02       0.84 f
+  iEX/iALU/adder/cla4_3/U24/Y (BUFX2)                     0.03       0.88 f
+  iEX/iALU/adder/cla4_3/U68/Y (AOI21X1)                   0.03       0.91 r
+  iEX/iALU/adder/cla4_3/U39/Y (BUFX2)                     0.04       0.95 r
+  iEX/iALU/adder/cla4_3/U25/Y (AND2X2)                    0.03       0.98 r
+  iEX/iALU/adder/cla4_3/U26/Y (INVX1)                     0.02       0.99 f
+  iEX/iALU/adder/cla4_3/U71/Y (OAI21X1)                   0.04       1.04 r
+  iEX/iALU/adder/cla4_3/Cout (cla4_1)                     0.00       1.04 r
+  iEX/iALU/adder/cla4_4/Cin (cla4_0)                      0.00       1.04 r
+  iEX/iALU/adder/cla4_4/U1/Y (INVX2)                      0.02       1.06 f
+  iEX/iALU/adder/cla4_4/U25/Y (INVX1)                     0.01       1.07 r
+  iEX/iALU/adder/cla4_4/U8/Y (INVX1)                      0.02       1.09 f
+  iEX/iALU/adder/cla4_4/U18/Y (XNOR2X1)                   0.03       1.12 f
+  iEX/iALU/adder/cla4_4/S<0> (cla4_0)                     0.00       1.12 f
+  iEX/iALU/adder/S<12> (cla16_0)                          0.00       1.12 f
+  iEX/iALU/U50/Y (AND2X1)                                 0.03       1.15 f
+  iEX/iALU/U61/Y (INVX1)                                  0.00       1.15 r
+  iEX/iALU/U160/Y (AND2X2)                                0.03       1.19 r
+  iEX/iALU/U106/Y (AND2X2)                                0.03       1.22 r
+  iEX/iALU/U107/Y (INVX1)                                 0.02       1.23 f
+  iEX/iALU/Out<12> (alu)                                  0.00       1.23 f
+  iEX/ALU_out<12> (execute)                               0.00       1.23 f
+  EMALU_out[12]/d (dff_210)                               0.00       1.23 f
+  EMALU_out[12]/U3/Y (INVX1)                              0.00       1.24 r
+  EMALU_out[12]/U4/Y (NOR2X1)                             0.01       1.24 f
+  EMALU_out[12]/state_reg/D (DFFPOSX1)                    0.00       1.24 f
+  data arrival time                                                  1.24
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMALU_out[12]/state_reg/CLK (DFFPOSX1)                  0.00       1.00 r
+  library setup time                                     -0.10       0.90
+  data required time                                                 0.90
+  --------------------------------------------------------------------------
+  data required time                                                 0.90
+  data arrival time                                                 -1.24
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.34
+
+
+  Startpoint: EMRd[1]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMALU_out[10]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[1]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[1]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[1]/q (dff_196)                                     0.00       0.11 f
+  frwrd/em_write_reg<1> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U9/Y (XNOR2X1)                                    0.05       0.16 r
+  frwrd/U22/Y (OR2X2)                                     0.05       0.20 r
+  frwrd/U23/Y (INVX1)                                     0.02       0.22 f
+  frwrd/U27/Y (AND2X2)                                    0.04       0.26 f
+  frwrd/U28/Y (INVX1)                                     0.00       0.25 r
+  frwrd/U38/Y (AND2X2)                                    0.04       0.30 r
+  frwrd/frwrd_sel_A<1> (forwarding_unit)                  0.00       0.30 r
+  iEX/frwrd_sel_A<1> (execute)                            0.00       0.30 r
+  iEX/U27/Y (BUFX4)                                       0.03       0.32 r
+  iEX/U256/Y (OAI21X1)                                    0.02       0.35 f
+  iEX/iALU/A<2> (alu)                                     0.00       0.35 f
+  iEX/iALU/U48/Y (INVX1)                                  0.00       0.35 r
+  iEX/iALU/neg_adder/A<2> (cla16_1)                       0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/A<2> (cla4_7)                 0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/U1/Y (INVX1)                  0.01       0.36 f
+  iEX/iALU/neg_adder/cla4_1/U6/Y (AND2X2)                 0.03       0.40 f
+  iEX/iALU/neg_adder/cla4_1/U66/Y (OAI21X1)               0.04       0.43 r
+  iEX/iALU/neg_adder/cla4_1/U12/Y (AND2X2)                0.03       0.46 r
+  iEX/iALU/neg_adder/cla4_1/U13/Y (INVX1)                 0.02       0.48 f
+  iEX/iALU/neg_adder/cla4_1/U33/Y (NOR2X1)                0.03       0.51 r
+  iEX/iALU/neg_adder/cla4_1/Cout (cla4_7)                 0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/Cin (cla4_6)                  0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/U24/Y (BUFX2)                 0.04       0.54 r
+  iEX/iALU/neg_adder/cla4_2/U1/Y (INVX1)                  0.03       0.57 f
+  iEX/iALU/neg_adder/cla4_2/U61/Y (INVX1)                 0.01       0.58 r
+  iEX/iALU/neg_adder/cla4_2/U92/Y (NAND3X1)               0.01       0.59 f
+  iEX/iALU/neg_adder/cla4_2/U18/Y (BUFX2)                 0.03       0.62 f
+  iEX/iALU/neg_adder/cla4_2/U93/Y (NAND3X1)               0.03       0.65 r
+  iEX/iALU/neg_adder/cla4_2/S<1> (cla4_6)                 0.00       0.65 r
+  iEX/iALU/neg_adder/U7/Y (BUFX2)                         0.03       0.68 r
+  iEX/iALU/neg_adder/S<5> (cla16_1)                       0.00       0.68 r
+  iEX/iALU/U5/Y (AND2X2)                                  0.03       0.72 r
+  iEX/iALU/U90/Y (INVX1)                                  0.01       0.73 f
+  iEX/iALU/U283/Y (NAND2X1)                               0.01       0.74 r
+  iEX/iALU/adder/A<5> (cla16_0)                           0.00       0.74 r
+  iEX/iALU/adder/cla4_2/A<1> (cla4_2)                     0.00       0.74 r
+  iEX/iALU/adder/cla4_2/U24/Y (BUFX2)                     0.04       0.78 r
+  iEX/iALU/adder/cla4_2/U11/Y (AND2X2)                    0.03       0.81 r
+  iEX/iALU/adder/cla4_2/U12/Y (INVX1)                     0.01       0.82 f
+  iEX/iALU/adder/cla4_2/U61/Y (AND2X2)                    0.04       0.86 f
+  iEX/iALU/adder/cla4_2/U63/Y (NAND3X1)                   0.03       0.88 r
+  iEX/iALU/adder/cla4_2/U14/Y (BUFX2)                     0.04       0.92 r
+  iEX/iALU/adder/cla4_2/U64/Y (AOI21X1)                   0.01       0.93 f
+  iEX/iALU/adder/cla4_2/U9/Y (INVX1)                      0.00       0.93 r
+  iEX/iALU/adder/cla4_2/U8/Y (AND2X2)                     0.03       0.96 r
+  iEX/iALU/adder/cla4_2/Cout (cla4_2)                     0.00       0.96 r
+  iEX/iALU/adder/cla4_3/Cin (cla4_1)                      0.00       0.96 r
+  iEX/iALU/adder/cla4_3/U41/Y (INVX1)                     0.02       0.98 f
+  iEX/iALU/adder/cla4_3/U40/Y (INVX1)                     0.01       0.99 r
+  iEX/iALU/adder/cla4_3/U27/Y (OR2X2)                     0.03       1.02 r
+  iEX/iALU/adder/cla4_3/U28/Y (INVX1)                     0.02       1.04 f
+  iEX/iALU/adder/cla4_3/U73/Y (OAI21X1)                   0.05       1.09 r
+  iEX/iALU/adder/cla4_3/U2/Y (XNOR2X1)                    0.04       1.12 f
+  iEX/iALU/adder/cla4_3/S<2> (cla4_1)                     0.00       1.12 f
+  iEX/iALU/adder/S<10> (cla16_0)                          0.00       1.12 f
+  iEX/iALU/U305/Y (INVX1)                                 0.01       1.13 r
+  iEX/iALU/U45/Y (OAI21X1)                                0.01       1.14 f
+  iEX/iALU/U46/Y (INVX1)                                  0.00       1.14 r
+  iEX/iALU/U115/Y (AND2X2)                                0.03       1.17 r
+  iEX/iALU/U116/Y (INVX1)                                 0.01       1.19 f
+  iEX/iALU/Out<10> (alu)                                  0.00       1.19 f
+  iEX/U77/Y (BUFX2)                                       0.03       1.22 f
+  iEX/ALU_out<10> (execute)                               0.00       1.22 f
+  EMALU_out[10]/d (dff_208)                               0.00       1.22 f
+  EMALU_out[10]/U3/Y (INVX1)                              0.00       1.22 r
+  EMALU_out[10]/U4/Y (NOR2X1)                             0.01       1.23 f
+  EMALU_out[10]/state_reg/D (DFFPOSX1)                    0.00       1.23 f
+  data arrival time                                                  1.23
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMALU_out[10]/state_reg/CLK (DFFPOSX1)                  0.00       1.00 r
+  library setup time                                     -0.10       0.90
+  data required time                                                 0.90
+  --------------------------------------------------------------------------
+  data required time                                                 0.90
+  data arrival time                                                 -1.23
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.32
+
+
+  Startpoint: DERs[1]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMPC_out[7]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DERs[1]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  DERs[1]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  DERs[1]/q (dff_269)                                     0.00       0.11 f
+  frwrd/de_Rs<1> (forwarding_unit)                        0.00       0.11 f
+  frwrd/U30/Y (AND2X2)                                    0.04       0.14 f
+  frwrd/U31/Y (INVX1)                                     0.00       0.14 r
+  frwrd/U19/Y (AND2X2)                                    0.03       0.17 r
+  frwrd/U7/Y (OR2X2)                                      0.04       0.21 r
+  frwrd/U20/Y (OR2X2)                                     0.04       0.25 r
+  frwrd/U21/Y (INVX1)                                     0.01       0.26 f
+  frwrd/U38/Y (AND2X2)                                    0.04       0.30 f
+  frwrd/frwrd_sel_A<1> (forwarding_unit)                  0.00       0.30 f
+  iEX/frwrd_sel_A<1> (execute)                            0.00       0.30 f
+  iEX/U27/Y (BUFX4)                                       0.05       0.35 f
+  iEX/U253/Y (OAI21X1)                                    0.04       0.39 r
+  iEX/iALU/A<0> (alu)                                     0.00       0.39 r
+  iEX/iALU/U49/Y (INVX1)                                  0.03       0.42 f
+  iEX/iALU/neg_adder/A<0> (cla16_1)                       0.00       0.42 f
+  iEX/iALU/neg_adder/cla4_1/A<0> (cla4_7)                 0.00       0.42 f
+  iEX/iALU/neg_adder/cla4_1/U26/Y (AND2X2)                0.04       0.46 f
+  iEX/iALU/neg_adder/cla4_1/U27/Y (INVX1)                 0.01       0.47 r
+  iEX/iALU/neg_adder/cla4_1/U28/Y (AND2X2)                0.04       0.50 r
+  iEX/iALU/neg_adder/cla4_1/U30/Y (INVX1)                 0.03       0.53 f
+  iEX/iALU/neg_adder/cla4_1/U68/YS (FAX1)                 0.08       0.61 f
+  iEX/iALU/neg_adder/cla4_1/S<1> (cla4_7)                 0.00       0.61 f
+  iEX/iALU/neg_adder/S<1> (cla16_1)                       0.00       0.61 f
+  iEX/iALU/U76/Y (AND2X2)                                 0.03       0.64 f
+  iEX/iALU/U77/Y (INVX1)                                  0.00       0.64 r
+  iEX/iALU/U318/Y (NAND2X1)                               0.01       0.65 f
+  iEX/iALU/adder/A<1> (cla16_0)                           0.00       0.65 f
+  iEX/iALU/adder/cla4_1/A<1> (cla4_3)                     0.00       0.65 f
+  iEX/iALU/adder/cla4_1/U10/Y (BUFX2)                     0.04       0.68 f
+  iEX/iALU/adder/cla4_1/U33/Y (OAI21X1)                   0.05       0.73 r
+  iEX/iALU/adder/cla4_1/U4/Y (AND2X2)                     0.03       0.76 r
+  iEX/iALU/adder/cla4_1/U5/Y (INVX1)                      0.02       0.78 f
+  iEX/iALU/adder/cla4_1/U34/Y (NOR3X1)                    0.03       0.81 r
+  iEX/iALU/adder/cla4_1/U35/Y (AOI21X1)                   0.02       0.83 f
+  iEX/iALU/adder/cla4_1/Cout (cla4_3)                     0.00       0.83 f
+  iEX/iALU/adder/cla4_2/Cin (cla4_2)                      0.00       0.83 f
+  iEX/iALU/adder/cla4_2/U25/Y (BUFX2)                     0.04       0.86 f
+  iEX/iALU/adder/cla4_2/U57/Y (INVX1)                     0.01       0.87 r
+  iEX/iALU/adder/cla4_2/U45/Y (INVX1)                     0.01       0.89 f
+  iEX/iALU/adder/cla4_2/U48/Y (AOI21X1)                   0.03       0.91 r
+  iEX/iALU/adder/cla4_2/U15/Y (BUFX2)                     0.04       0.95 r
+  iEX/iALU/adder/cla4_2/U5/Y (INVX1)                      0.02       0.98 f
+  iEX/iALU/adder/cla4_2/U70/Y (NOR3X1)                    0.03       1.01 r
+  iEX/iALU/adder/cla4_2/U73/Y (NOR3X1)                    0.04       1.04 f
+  iEX/iALU/adder/cla4_2/S<3> (cla4_2)                     0.00       1.04 f
+  iEX/iALU/adder/S<7> (cla16_0)                           0.00       1.04 f
+  iEX/iALU/U428/Y (AOI21X1)                               0.04       1.08 r
+  iEX/iALU/U138/Y (AND2X2)                                0.03       1.11 r
+  iEX/iALU/U139/Y (INVX1)                                 0.02       1.14 f
+  iEX/iALU/Out<7> (alu)                                   0.00       1.14 f
+  iEX/U312/Y (AOI22X1)                                    0.04       1.17 r
+  iEX/U64/Y (BUFX2)                                       0.04       1.21 r
+  iEX/U313/Y (NAND2X1)                                    0.01       1.22 f
+  iEX/PC_out<7> (execute)                                 0.00       1.22 f
+  EMPC_out[7]/d (dff_237)                                 0.00       1.22 f
+  EMPC_out[7]/U3/Y (AND2X2)                               0.03       1.25 f
+  EMPC_out[7]/state_reg/D (DFFPOSX1)                      0.00       1.25 f
+  data arrival time                                                  1.25
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMPC_out[7]/state_reg/CLK (DFFPOSX1)                    0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.25
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.32
+
+
+  Startpoint: EMRd[1]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMALU_out[9]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[1]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[1]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[1]/q (dff_196)                                     0.00       0.11 f
+  frwrd/em_write_reg<1> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U9/Y (XNOR2X1)                                    0.05       0.16 r
+  frwrd/U22/Y (OR2X2)                                     0.05       0.20 r
+  frwrd/U23/Y (INVX1)                                     0.02       0.22 f
+  frwrd/U27/Y (AND2X2)                                    0.04       0.26 f
+  frwrd/U28/Y (INVX1)                                     0.00       0.25 r
+  frwrd/U38/Y (AND2X2)                                    0.04       0.30 r
+  frwrd/frwrd_sel_A<1> (forwarding_unit)                  0.00       0.30 r
+  iEX/frwrd_sel_A<1> (execute)                            0.00       0.30 r
+  iEX/U27/Y (BUFX4)                                       0.03       0.32 r
+  iEX/U256/Y (OAI21X1)                                    0.02       0.35 f
+  iEX/iALU/A<2> (alu)                                     0.00       0.35 f
+  iEX/iALU/U48/Y (INVX1)                                  0.00       0.35 r
+  iEX/iALU/neg_adder/A<2> (cla16_1)                       0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/A<2> (cla4_7)                 0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/U1/Y (INVX1)                  0.01       0.36 f
+  iEX/iALU/neg_adder/cla4_1/U6/Y (AND2X2)                 0.03       0.40 f
+  iEX/iALU/neg_adder/cla4_1/U66/Y (OAI21X1)               0.04       0.43 r
+  iEX/iALU/neg_adder/cla4_1/U12/Y (AND2X2)                0.03       0.46 r
+  iEX/iALU/neg_adder/cla4_1/U13/Y (INVX1)                 0.02       0.48 f
+  iEX/iALU/neg_adder/cla4_1/U33/Y (NOR2X1)                0.03       0.51 r
+  iEX/iALU/neg_adder/cla4_1/Cout (cla4_7)                 0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/Cin (cla4_6)                  0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/U24/Y (BUFX2)                 0.04       0.54 r
+  iEX/iALU/neg_adder/cla4_2/U1/Y (INVX1)                  0.03       0.57 f
+  iEX/iALU/neg_adder/cla4_2/U61/Y (INVX1)                 0.01       0.58 r
+  iEX/iALU/neg_adder/cla4_2/U92/Y (NAND3X1)               0.01       0.59 f
+  iEX/iALU/neg_adder/cla4_2/U18/Y (BUFX2)                 0.03       0.62 f
+  iEX/iALU/neg_adder/cla4_2/U93/Y (NAND3X1)               0.03       0.65 r
+  iEX/iALU/neg_adder/cla4_2/S<1> (cla4_6)                 0.00       0.65 r
+  iEX/iALU/neg_adder/U7/Y (BUFX2)                         0.03       0.68 r
+  iEX/iALU/neg_adder/S<5> (cla16_1)                       0.00       0.68 r
+  iEX/iALU/U5/Y (AND2X2)                                  0.03       0.72 r
+  iEX/iALU/U90/Y (INVX1)                                  0.01       0.73 f
+  iEX/iALU/U283/Y (NAND2X1)                               0.01       0.74 r
+  iEX/iALU/adder/A<5> (cla16_0)                           0.00       0.74 r
+  iEX/iALU/adder/cla4_2/A<1> (cla4_2)                     0.00       0.74 r
+  iEX/iALU/adder/cla4_2/U24/Y (BUFX2)                     0.04       0.78 r
+  iEX/iALU/adder/cla4_2/U11/Y (AND2X2)                    0.03       0.81 r
+  iEX/iALU/adder/cla4_2/U12/Y (INVX1)                     0.01       0.82 f
+  iEX/iALU/adder/cla4_2/U61/Y (AND2X2)                    0.04       0.86 f
+  iEX/iALU/adder/cla4_2/U63/Y (NAND3X1)                   0.03       0.88 r
+  iEX/iALU/adder/cla4_2/U14/Y (BUFX2)                     0.04       0.92 r
+  iEX/iALU/adder/cla4_2/U64/Y (AOI21X1)                   0.01       0.93 f
+  iEX/iALU/adder/cla4_2/U9/Y (INVX1)                      0.00       0.93 r
+  iEX/iALU/adder/cla4_2/U8/Y (AND2X2)                     0.03       0.96 r
+  iEX/iALU/adder/cla4_2/Cout (cla4_2)                     0.00       0.96 r
+  iEX/iALU/adder/cla4_3/Cin (cla4_1)                      0.00       0.96 r
+  iEX/iALU/adder/cla4_3/U41/Y (INVX1)                     0.02       0.98 f
+  iEX/iALU/adder/cla4_3/U1/Y (INVX1)                      0.00       0.99 r
+  iEX/iALU/adder/cla4_3/U19/Y (AND2X2)                    0.03       1.02 r
+  iEX/iALU/adder/cla4_3/U20/Y (INVX1)                     0.01       1.03 f
+  iEX/iALU/adder/cla4_3/U36/Y (AND2X2)                    0.04       1.07 f
+  iEX/iALU/adder/cla4_3/U10/Y (XNOR2X1)                   0.03       1.10 f
+  iEX/iALU/adder/cla4_3/S<1> (cla4_1)                     0.00       1.10 f
+  iEX/iALU/adder/S<9> (cla16_0)                           0.00       1.10 f
+  iEX/iALU/U421/Y (AOI21X1)                               0.04       1.14 r
+  iEX/iALU/U56/Y (BUFX2)                                  0.03       1.17 r
+  iEX/iALU/U118/Y (AND2X2)                                0.03       1.20 r
+  iEX/iALU/U119/Y (INVX1)                                 0.01       1.22 f
+  iEX/iALU/Out<9> (alu)                                   0.00       1.22 f
+  iEX/U85/Y (BUFX2)                                       0.03       1.25 f
+  iEX/ALU_out<9> (execute)                                0.00       1.25 f
+  EMALU_out[9]/d (dff_207)                                0.00       1.25 f
+  EMALU_out[9]/U3/Y (INVX1)                               0.00       1.25 r
+  EMALU_out[9]/U4/Y (NOR2X1)                              0.01       1.26 f
+  EMALU_out[9]/state_reg/D (DFFPOSX1)                     0.00       1.26 f
+  data arrival time                                                  1.26
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMALU_out[9]/state_reg/CLK (DFFPOSX1)                   0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.26
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.32
+
+
+  Startpoint: EMRd[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMPC_out[1]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[0]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[0]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[0]/q (dff_195)                                     0.00       0.11 f
+  frwrd/em_write_reg<0> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U39/Y (INVX1)                                     0.02       0.12 r
+  frwrd/U37/Y (XNOR2X1)                                   0.02       0.15 f
+  frwrd/U25/Y (OR2X2)                                     0.05       0.20 f
+  frwrd/U26/Y (INVX1)                                     0.00       0.19 r
+  frwrd/U3/Y (AND2X2)                                     0.03       0.22 r
+  frwrd/U18/Y (INVX1)                                     0.02       0.24 f
+  frwrd/U17/Y (NOR2X1)                                    0.03       0.27 r
+  frwrd/U15/Y (INVX1)                                     0.02       0.29 f
+  frwrd/U51/Y (NAND3X1)                                   0.03       0.32 r
+  frwrd/U24/Y (BUFX2)                                     0.03       0.36 r
+  frwrd/U52/Y (NOR2X1)                                    0.01       0.37 f
+  frwrd/frwrd_sel_B<1> (forwarding_unit)                  0.00       0.37 f
+  iEX/frwrd_sel_B<1> (execute)                            0.00       0.37 f
+  iEX/U135/Y (INVX1)                                      0.00       0.37 r
+  iEX/U145/Y (INVX1)                                      0.02       0.39 f
+  iEX/U18/Y (INVX1)                                       0.00       0.39 r
+  iEX/U147/Y (AND2X2)                                     0.04       0.43 r
+  iEX/U60/Y (AND2X2)                                      0.03       0.46 r
+  iEX/U61/Y (INVX1)                                       0.01       0.47 f
+  iEX/U23/Y (AND2X2)                                      0.03       0.51 f
+  iEX/U161/Y (NAND2X1)                                    0.01       0.52 r
+  iEX/iALU/B<0> (alu)                                     0.00       0.52 r
+  iEX/iALU/U314/Y (BUFX2)                                 0.05       0.57 r
+  iEX/iALU/U299/Y (INVX1)                                 0.03       0.60 f
+  iEX/iALU/U345/Y (OR2X2)                                 0.05       0.65 f
+  iEX/iALU/U6/Y (INVX4)                                   0.03       0.67 r
+  iEX/iALU/shift/Cnt<0> (shifter)                         0.00       0.67 r
+  iEX/iALU/shift/U124/Y (INVX8)                           0.03       0.70 f
+  iEX/iALU/shift/U260/Y (AOI22X1)                         0.04       0.74 r
+  iEX/iALU/shift/U50/Y (BUFX2)                            0.04       0.77 r
+  iEX/iALU/shift/U261/Y (OAI21X1)                         0.02       0.79 f
+  iEX/iALU/shift/U262/Y (AOI22X1)                         0.05       0.84 r
+  iEX/iALU/shift/U51/Y (BUFX2)                            0.04       0.88 r
+  iEX/iALU/shift/U15/Y (OAI21X1)                          0.02       0.90 f
+  iEX/iALU/shift/U264/Y (AOI22X1)                         0.04       0.94 r
+  iEX/iALU/shift/U52/Y (BUFX2)                            0.04       0.97 r
+  iEX/iALU/shift/U110/Y (OAI21X1)                         0.02       0.99 f
+  iEX/iALU/shift/U69/Y (AND2X2)                           0.03       1.02 f
+  iEX/iALU/shift/U70/Y (INVX1)                            0.00       1.02 r
+  iEX/iALU/shift/U265/Y (OAI21X1)                         0.01       1.03 f
+  iEX/iALU/shift/Out<1> (shifter)                         0.00       1.03 f
+  iEX/iALU/U448/Y (AOI22X1)                               0.02       1.05 r
+  iEX/iALU/U130/Y (AND2X2)                                0.04       1.09 r
+  iEX/iALU/U131/Y (INVX1)                                 0.01       1.10 f
+  iEX/iALU/Out<1> (alu)                                   0.00       1.10 f
+  iEX/U80/Y (BUFX2)                                       0.03       1.14 f
+  iEX/U295/Y (AOI22X1)                                    0.03       1.17 r
+  iEX/U62/Y (BUFX2)                                       0.04       1.20 r
+  iEX/U296/Y (NAND2X1)                                    0.01       1.22 f
+  iEX/PC_out<1> (execute)                                 0.00       1.22 f
+  EMPC_out[1]/d (dff_231)                                 0.00       1.22 f
+  EMPC_out[1]/U3/Y (AND2X2)                               0.03       1.25 f
+  EMPC_out[1]/state_reg/D (DFFPOSX1)                      0.00       1.25 f
+  data arrival time                                                  1.25
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMPC_out[1]/state_reg/CLK (DFFPOSX1)                    0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.25
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.31
+
+
+  Startpoint: EMRd[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMPC_out[8]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[0]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[0]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[0]/q (dff_195)                                     0.00       0.11 f
+  frwrd/em_write_reg<0> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U39/Y (INVX1)                                     0.02       0.12 r
+  frwrd/U37/Y (XNOR2X1)                                   0.02       0.15 f
+  frwrd/U25/Y (OR2X2)                                     0.05       0.20 f
+  frwrd/U26/Y (INVX1)                                     0.00       0.19 r
+  frwrd/U3/Y (AND2X2)                                     0.03       0.22 r
+  frwrd/U18/Y (INVX1)                                     0.02       0.24 f
+  frwrd/U17/Y (NOR2X1)                                    0.03       0.27 r
+  frwrd/U15/Y (INVX1)                                     0.02       0.29 f
+  frwrd/U51/Y (NAND3X1)                                   0.03       0.32 r
+  frwrd/U24/Y (BUFX2)                                     0.03       0.36 r
+  frwrd/U52/Y (NOR2X1)                                    0.01       0.37 f
+  frwrd/frwrd_sel_B<1> (forwarding_unit)                  0.00       0.37 f
+  iEX/frwrd_sel_B<1> (execute)                            0.00       0.37 f
+  iEX/U135/Y (INVX1)                                      0.00       0.37 r
+  iEX/U145/Y (INVX1)                                      0.02       0.39 f
+  iEX/U17/Y (AND2X2)                                      0.04       0.43 f
+  iEX/U202/Y (AOI22X1)                                    0.02       0.45 r
+  iEX/U23/Y (AND2X2)                                      0.03       0.49 r
+  iEX/U161/Y (NAND2X1)                                    0.01       0.50 f
+  iEX/iALU/B<0> (alu)                                     0.00       0.50 f
+  iEX/iALU/U314/Y (BUFX2)                                 0.05       0.55 f
+  iEX/iALU/U299/Y (INVX1)                                 0.01       0.56 r
+  iEX/iALU/U345/Y (OR2X2)                                 0.05       0.60 r
+  iEX/iALU/U6/Y (INVX4)                                   0.03       0.63 f
+  iEX/iALU/shift/Cnt<0> (shifter)                         0.00       0.63 f
+  iEX/iALU/shift/U165/Y (AND2X2)                          0.04       0.67 f
+  iEX/iALU/shift/U166/Y (INVX8)                           0.03       0.70 r
+  iEX/iALU/shift/U164/Y (INVX2)                           0.03       0.73 f
+  iEX/iALU/shift/U227/Y (AOI22X1)                         0.03       0.75 r
+  iEX/iALU/shift/U35/Y (BUFX2)                            0.04       0.79 r
+  iEX/iALU/shift/U228/Y (OAI21X1)                         0.02       0.81 f
+  iEX/iALU/shift/U229/Y (AOI22X1)                         0.03       0.84 r
+  iEX/iALU/shift/U36/Y (BUFX2)                            0.04       0.87 r
+  iEX/iALU/shift/U230/Y (OAI21X1)                         0.02       0.89 f
+  iEX/iALU/shift/U236/Y (AOI22X1)                         0.04       0.92 r
+  iEX/iALU/shift/U39/Y (BUFX2)                            0.04       0.96 r
+  iEX/iALU/shift/U237/Y (OAI21X1)                         0.02       0.98 f
+  iEX/iALU/shift/U73/Y (AND2X2)                           0.03       1.01 f
+  iEX/iALU/shift/U74/Y (INVX1)                            0.00       1.01 r
+  iEX/iALU/shift/U307/Y (OAI21X1)                         0.01       1.02 f
+  iEX/iALU/shift/Out<8> (shifter)                         0.00       1.02 f
+  iEX/iALU/U422/Y (AOI22X1)                               0.03       1.04 r
+  iEX/iALU/U121/Y (AND2X2)                                0.04       1.08 r
+  iEX/iALU/U122/Y (INVX1)                                 0.01       1.09 f
+  iEX/iALU/Out<8> (alu)                                   0.00       1.09 f
+  iEX/U82/Y (BUFX2)                                       0.03       1.13 f
+  iEX/U315/Y (AOI22X1)                                    0.03       1.16 r
+  iEX/U65/Y (BUFX2)                                       0.04       1.19 r
+  iEX/U316/Y (NAND2X1)                                    0.01       1.20 f
+  iEX/PC_out<8> (execute)                                 0.00       1.20 f
+  EMPC_out[8]/d (dff_238)                                 0.00       1.20 f
+  EMPC_out[8]/U3/Y (INVX1)                                0.00       1.21 r
+  EMPC_out[8]/U4/Y (NOR2X1)                               0.01       1.22 f
+  EMPC_out[8]/state_reg/D (DFFPOSX1)                      0.00       1.22 f
+  data arrival time                                                  1.22
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMPC_out[8]/state_reg/CLK (DFFPOSX1)                    0.00       1.00 r
+  library setup time                                     -0.10       0.90
+  data required time                                                 0.90
+  --------------------------------------------------------------------------
+  data required time                                                 0.90
+  data arrival time                                                 -1.22
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.31
+
+
+  Startpoint: EMRd[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMPC_out[6]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[0]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[0]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[0]/q (dff_195)                                     0.00       0.11 f
+  frwrd/em_write_reg<0> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U39/Y (INVX1)                                     0.02       0.12 r
+  frwrd/U37/Y (XNOR2X1)                                   0.02       0.15 f
+  frwrd/U25/Y (OR2X2)                                     0.05       0.20 f
+  frwrd/U26/Y (INVX1)                                     0.00       0.19 r
+  frwrd/U3/Y (AND2X2)                                     0.03       0.22 r
+  frwrd/U18/Y (INVX1)                                     0.02       0.24 f
+  frwrd/U17/Y (NOR2X1)                                    0.03       0.27 r
+  frwrd/U15/Y (INVX1)                                     0.02       0.29 f
+  frwrd/U51/Y (NAND3X1)                                   0.03       0.32 r
+  frwrd/U24/Y (BUFX2)                                     0.03       0.36 r
+  frwrd/U52/Y (NOR2X1)                                    0.01       0.37 f
+  frwrd/frwrd_sel_B<1> (forwarding_unit)                  0.00       0.37 f
+  iEX/frwrd_sel_B<1> (execute)                            0.00       0.37 f
+  iEX/U135/Y (INVX1)                                      0.00       0.37 r
+  iEX/U145/Y (INVX1)                                      0.02       0.39 f
+  iEX/U17/Y (AND2X2)                                      0.04       0.43 f
+  iEX/U202/Y (AOI22X1)                                    0.02       0.45 r
+  iEX/U23/Y (AND2X2)                                      0.03       0.49 r
+  iEX/U161/Y (NAND2X1)                                    0.01       0.50 f
+  iEX/iALU/B<0> (alu)                                     0.00       0.50 f
+  iEX/iALU/U314/Y (BUFX2)                                 0.05       0.55 f
+  iEX/iALU/U299/Y (INVX1)                                 0.01       0.56 r
+  iEX/iALU/U345/Y (OR2X2)                                 0.05       0.60 r
+  iEX/iALU/U6/Y (INVX4)                                   0.03       0.63 f
+  iEX/iALU/shift/Cnt<0> (shifter)                         0.00       0.63 f
+  iEX/iALU/shift/U124/Y (INVX8)                           0.02       0.66 r
+  iEX/iALU/shift/U107/Y (NOR2X1)                          0.01       0.67 f
+  iEX/iALU/shift/U109/Y (INVX1)                           0.00       0.67 r
+  iEX/iALU/shift/U10/Y (INVX1)                            0.03       0.70 f
+  iEX/iALU/shift/U17/Y (AND2X2)                           0.04       0.75 f
+  iEX/iALU/shift/U18/Y (INVX1)                            0.00       0.75 r
+  iEX/iALU/shift/U126/Y (AND2X2)                          0.03       0.78 r
+  iEX/iALU/shift/U153/Y (AND2X2)                          0.03       0.81 r
+  iEX/iALU/shift/U154/Y (INVX1)                           0.02       0.83 f
+  iEX/iALU/shift/U121/Y (AOI22X1)                         0.03       0.86 r
+  iEX/iALU/shift/U26/Y (BUFX2)                            0.04       0.90 r
+  iEX/iALU/shift/U273/Y (OAI21X1)                         0.02       0.92 f
+  iEX/iALU/shift/U118/Y (AOI22X1)                         0.03       0.95 r
+  iEX/iALU/shift/U25/Y (BUFX2)                            0.04       0.98 r
+  iEX/iALU/shift/U299/Y (OAI21X1)                         0.02       1.00 f
+  iEX/iALU/shift/U117/Y (INVX1)                           0.00       1.00 r
+  iEX/iALU/shift/U8/Y (OR2X2)                             0.04       1.04 r
+  iEX/iALU/shift/U300/Y (OAI21X1)                         0.01       1.05 f
+  iEX/iALU/shift/Out<6> (shifter)                         0.00       1.05 f
+  iEX/iALU/U429/Y (AOI22X1)                               0.02       1.08 r
+  iEX/iALU/U140/Y (AND2X2)                                0.03       1.11 r
+  iEX/iALU/U141/Y (INVX1)                                 0.02       1.13 f
+  iEX/iALU/Out<6> (alu)                                   0.00       1.13 f
+  iEX/U120/Y (AOI22X1)                                    0.03       1.16 r
+  iEX/U59/Y (BUFX2)                                       0.03       1.20 r
+  iEX/U310/Y (NAND2X1)                                    0.01       1.21 f
+  iEX/PC_out<6> (execute)                                 0.00       1.21 f
+  EMPC_out[6]/d (dff_236)                                 0.00       1.21 f
+  EMPC_out[6]/U3/Y (AND2X2)                               0.03       1.24 f
+  EMPC_out[6]/state_reg/D (DFFPOSX1)                      0.00       1.24 f
+  data arrival time                                                  1.24
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMPC_out[6]/state_reg/CLK (DFFPOSX1)                    0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.24
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.31
+
+
+  Startpoint: EMRd[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMPC_out[5]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[0]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[0]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[0]/q (dff_195)                                     0.00       0.11 f
+  frwrd/em_write_reg<0> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U39/Y (INVX1)                                     0.02       0.12 r
+  frwrd/U37/Y (XNOR2X1)                                   0.02       0.15 f
+  frwrd/U25/Y (OR2X2)                                     0.05       0.20 f
+  frwrd/U26/Y (INVX1)                                     0.00       0.19 r
+  frwrd/U3/Y (AND2X2)                                     0.03       0.22 r
+  frwrd/U18/Y (INVX1)                                     0.02       0.24 f
+  frwrd/U17/Y (NOR2X1)                                    0.03       0.27 r
+  frwrd/U15/Y (INVX1)                                     0.02       0.29 f
+  frwrd/U51/Y (NAND3X1)                                   0.03       0.32 r
+  frwrd/U24/Y (BUFX2)                                     0.03       0.36 r
+  frwrd/U52/Y (NOR2X1)                                    0.01       0.37 f
+  frwrd/frwrd_sel_B<1> (forwarding_unit)                  0.00       0.37 f
+  iEX/frwrd_sel_B<1> (execute)                            0.00       0.37 f
+  iEX/U135/Y (INVX1)                                      0.00       0.37 r
+  iEX/U145/Y (INVX1)                                      0.02       0.39 f
+  iEX/U18/Y (INVX1)                                       0.00       0.39 r
+  iEX/U147/Y (AND2X2)                                     0.04       0.43 r
+  iEX/U60/Y (AND2X2)                                      0.03       0.46 r
+  iEX/U61/Y (INVX1)                                       0.01       0.47 f
+  iEX/U23/Y (AND2X2)                                      0.03       0.51 f
+  iEX/U161/Y (NAND2X1)                                    0.01       0.52 r
+  iEX/iALU/B<0> (alu)                                     0.00       0.52 r
+  iEX/iALU/U314/Y (BUFX2)                                 0.05       0.57 r
+  iEX/iALU/U299/Y (INVX1)                                 0.03       0.60 f
+  iEX/iALU/U345/Y (OR2X2)                                 0.05       0.65 f
+  iEX/iALU/U6/Y (INVX4)                                   0.03       0.67 r
+  iEX/iALU/shift/Cnt<0> (shifter)                         0.00       0.67 r
+  iEX/iALU/shift/U124/Y (INVX8)                           0.03       0.70 f
+  iEX/iALU/shift/U260/Y (AOI22X1)                         0.04       0.74 r
+  iEX/iALU/shift/U50/Y (BUFX2)                            0.04       0.77 r
+  iEX/iALU/shift/U261/Y (OAI21X1)                         0.02       0.79 f
+  iEX/iALU/shift/U262/Y (AOI22X1)                         0.05       0.84 r
+  iEX/iALU/shift/U51/Y (BUFX2)                            0.04       0.88 r
+  iEX/iALU/shift/U263/Y (OAI21X1)                         0.02       0.90 f
+  iEX/iALU/shift/U295/Y (AOI22X1)                         0.04       0.93 r
+  iEX/iALU/shift/U65/Y (BUFX2)                            0.04       0.97 r
+  iEX/iALU/shift/U296/Y (OAI21X1)                         0.02       0.98 f
+  iEX/iALU/shift/U127/Y (AND2X2)                          0.03       1.01 f
+  iEX/iALU/shift/U128/Y (INVX1)                           0.00       1.01 r
+  iEX/iALU/shift/U297/Y (OAI21X1)                         0.01       1.02 f
+  iEX/iALU/shift/Out<5> (shifter)                         0.00       1.02 f
+  iEX/iALU/U432/Y (AOI22X1)                               0.03       1.06 r
+  iEX/iALU/U124/Y (AND2X2)                                0.04       1.09 r
+  iEX/iALU/U125/Y (INVX1)                                 0.01       1.11 f
+  iEX/iALU/Out<5> (alu)                                   0.00       1.11 f
+  iEX/U81/Y (BUFX2)                                       0.03       1.14 f
+  iEX/U307/Y (AOI22X1)                                    0.03       1.17 r
+  iEX/U63/Y (BUFX2)                                       0.04       1.21 r
+  iEX/U308/Y (NAND2X1)                                    0.01       1.22 f
+  iEX/PC_out<5> (execute)                                 0.00       1.22 f
+  EMPC_out[5]/d (dff_235)                                 0.00       1.22 f
+  EMPC_out[5]/U3/Y (INVX1)                                0.00       1.22 r
+  EMPC_out[5]/U4/Y (NOR2X1)                               0.01       1.23 f
+  EMPC_out[5]/state_reg/D (DFFPOSX1)                      0.00       1.23 f
+  data arrival time                                                  1.23
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMPC_out[5]/state_reg/CLK (DFFPOSX1)                    0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.23
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.29
+
+
+  Startpoint: EMRd[1]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMALU_out[11]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[1]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[1]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[1]/q (dff_196)                                     0.00       0.11 f
+  frwrd/em_write_reg<1> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U9/Y (XNOR2X1)                                    0.05       0.16 r
+  frwrd/U22/Y (OR2X2)                                     0.05       0.20 r
+  frwrd/U23/Y (INVX1)                                     0.02       0.22 f
+  frwrd/U27/Y (AND2X2)                                    0.04       0.26 f
+  frwrd/U28/Y (INVX1)                                     0.00       0.25 r
+  frwrd/U38/Y (AND2X2)                                    0.04       0.30 r
+  frwrd/frwrd_sel_A<1> (forwarding_unit)                  0.00       0.30 r
+  iEX/frwrd_sel_A<1> (execute)                            0.00       0.30 r
+  iEX/U27/Y (BUFX4)                                       0.03       0.32 r
+  iEX/U256/Y (OAI21X1)                                    0.02       0.35 f
+  iEX/iALU/A<2> (alu)                                     0.00       0.35 f
+  iEX/iALU/U48/Y (INVX1)                                  0.00       0.35 r
+  iEX/iALU/neg_adder/A<2> (cla16_1)                       0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/A<2> (cla4_7)                 0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/U1/Y (INVX1)                  0.01       0.36 f
+  iEX/iALU/neg_adder/cla4_1/U6/Y (AND2X2)                 0.03       0.40 f
+  iEX/iALU/neg_adder/cla4_1/U66/Y (OAI21X1)               0.04       0.43 r
+  iEX/iALU/neg_adder/cla4_1/U12/Y (AND2X2)                0.03       0.46 r
+  iEX/iALU/neg_adder/cla4_1/U13/Y (INVX1)                 0.02       0.48 f
+  iEX/iALU/neg_adder/cla4_1/U33/Y (NOR2X1)                0.03       0.51 r
+  iEX/iALU/neg_adder/cla4_1/Cout (cla4_7)                 0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/Cin (cla4_6)                  0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/U24/Y (BUFX2)                 0.04       0.54 r
+  iEX/iALU/neg_adder/cla4_2/U1/Y (INVX1)                  0.03       0.57 f
+  iEX/iALU/neg_adder/cla4_2/U61/Y (INVX1)                 0.01       0.58 r
+  iEX/iALU/neg_adder/cla4_2/U92/Y (NAND3X1)               0.01       0.59 f
+  iEX/iALU/neg_adder/cla4_2/U18/Y (BUFX2)                 0.03       0.62 f
+  iEX/iALU/neg_adder/cla4_2/U93/Y (NAND3X1)               0.03       0.65 r
+  iEX/iALU/neg_adder/cla4_2/S<1> (cla4_6)                 0.00       0.65 r
+  iEX/iALU/neg_adder/U7/Y (BUFX2)                         0.03       0.68 r
+  iEX/iALU/neg_adder/S<5> (cla16_1)                       0.00       0.68 r
+  iEX/iALU/U5/Y (AND2X2)                                  0.03       0.72 r
+  iEX/iALU/U90/Y (INVX1)                                  0.01       0.73 f
+  iEX/iALU/U283/Y (NAND2X1)                               0.01       0.74 r
+  iEX/iALU/adder/A<5> (cla16_0)                           0.00       0.74 r
+  iEX/iALU/adder/cla4_2/A<1> (cla4_2)                     0.00       0.74 r
+  iEX/iALU/adder/cla4_2/U24/Y (BUFX2)                     0.04       0.78 r
+  iEX/iALU/adder/cla4_2/U11/Y (AND2X2)                    0.03       0.81 r
+  iEX/iALU/adder/cla4_2/U12/Y (INVX1)                     0.01       0.82 f
+  iEX/iALU/adder/cla4_2/U61/Y (AND2X2)                    0.04       0.86 f
+  iEX/iALU/adder/cla4_2/U63/Y (NAND3X1)                   0.03       0.88 r
+  iEX/iALU/adder/cla4_2/U14/Y (BUFX2)                     0.04       0.92 r
+  iEX/iALU/adder/cla4_2/U64/Y (AOI21X1)                   0.01       0.93 f
+  iEX/iALU/adder/cla4_2/U9/Y (INVX1)                      0.00       0.93 r
+  iEX/iALU/adder/cla4_2/U8/Y (AND2X2)                     0.03       0.96 r
+  iEX/iALU/adder/cla4_2/Cout (cla4_2)                     0.00       0.96 r
+  iEX/iALU/adder/cla4_3/Cin (cla4_1)                      0.00       0.96 r
+  iEX/iALU/adder/cla4_3/U41/Y (INVX1)                     0.02       0.98 f
+  iEX/iALU/adder/cla4_3/U76/Y (AOI21X1)                   0.03       1.02 r
+  iEX/iALU/adder/cla4_3/U35/Y (BUFX2)                     0.04       1.05 r
+  iEX/iALU/adder/cla4_3/U52/Y (XOR2X1)                    0.03       1.09 f
+  iEX/iALU/adder/cla4_3/S<3> (cla4_1)                     0.00       1.09 f
+  iEX/iALU/adder/S<11> (cla16_0)                          0.00       1.09 f
+  iEX/iALU/U42/Y (INVX1)                                  0.01       1.09 r
+  iEX/iALU/U41/Y (OAI21X1)                                0.01       1.10 f
+  iEX/iALU/U40/Y (INVX1)                                  0.00       1.10 r
+  iEX/iALU/U112/Y (AND2X2)                                0.03       1.13 r
+  iEX/iALU/U113/Y (INVX1)                                 0.01       1.15 f
+  iEX/iALU/Out<11> (alu)                                  0.00       1.15 f
+  iEX/U78/Y (BUFX2)                                       0.03       1.18 f
+  iEX/ALU_out<11> (execute)                               0.00       1.18 f
+  EMALU_out[11]/d (dff_209)                               0.00       1.18 f
+  EMALU_out[11]/U3/Y (INVX1)                              0.00       1.18 r
+  EMALU_out[11]/U4/Y (NOR2X1)                             0.01       1.19 f
+  EMALU_out[11]/state_reg/D (DFFPOSX1)                    0.00       1.19 f
+  data arrival time                                                  1.19
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMALU_out[11]/state_reg/CLK (DFFPOSX1)                  0.00       1.00 r
+  library setup time                                     -0.10       0.90
+  data required time                                                 0.90
+  --------------------------------------------------------------------------
+  data required time                                                 0.90
+  data arrival time                                                 -1.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.28
+
+
+  Startpoint: EMRd[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMALU_out[3]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[0]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[0]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[0]/q (dff_195)                                     0.00       0.11 f
+  frwrd/em_write_reg<0> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U39/Y (INVX1)                                     0.02       0.12 r
+  frwrd/U37/Y (XNOR2X1)                                   0.02       0.15 f
+  frwrd/U25/Y (OR2X2)                                     0.05       0.20 f
+  frwrd/U26/Y (INVX1)                                     0.00       0.19 r
+  frwrd/U3/Y (AND2X2)                                     0.03       0.22 r
+  frwrd/U18/Y (INVX1)                                     0.02       0.24 f
+  frwrd/U17/Y (NOR2X1)                                    0.03       0.27 r
+  frwrd/U15/Y (INVX1)                                     0.02       0.29 f
+  frwrd/U51/Y (NAND3X1)                                   0.03       0.32 r
+  frwrd/U24/Y (BUFX2)                                     0.03       0.36 r
+  frwrd/U52/Y (NOR2X1)                                    0.01       0.37 f
+  frwrd/frwrd_sel_B<1> (forwarding_unit)                  0.00       0.37 f
+  iEX/frwrd_sel_B<1> (execute)                            0.00       0.37 f
+  iEX/U135/Y (INVX1)                                      0.00       0.37 r
+  iEX/U145/Y (INVX1)                                      0.02       0.39 f
+  iEX/U18/Y (INVX1)                                       0.00       0.39 r
+  iEX/U147/Y (AND2X2)                                     0.04       0.43 r
+  iEX/U60/Y (AND2X2)                                      0.03       0.46 r
+  iEX/U61/Y (INVX1)                                       0.01       0.47 f
+  iEX/U23/Y (AND2X2)                                      0.03       0.51 f
+  iEX/U161/Y (NAND2X1)                                    0.01       0.52 r
+  iEX/iALU/B<0> (alu)                                     0.00       0.52 r
+  iEX/iALU/U314/Y (BUFX2)                                 0.05       0.57 r
+  iEX/iALU/U299/Y (INVX1)                                 0.03       0.60 f
+  iEX/iALU/U345/Y (OR2X2)                                 0.05       0.65 f
+  iEX/iALU/U6/Y (INVX4)                                   0.03       0.67 r
+  iEX/iALU/shift/Cnt<0> (shifter)                         0.00       0.67 r
+  iEX/iALU/shift/U124/Y (INVX8)                           0.03       0.70 f
+  iEX/iALU/shift/U260/Y (AOI22X1)                         0.04       0.74 r
+  iEX/iALU/shift/U50/Y (BUFX2)                            0.04       0.77 r
+  iEX/iALU/shift/U261/Y (OAI21X1)                         0.02       0.79 f
+  iEX/iALU/shift/U283/Y (AOI22X1)                         0.04       0.83 r
+  iEX/iALU/shift/U60/Y (BUFX2)                            0.04       0.87 r
+  iEX/iALU/shift/U284/Y (OAI21X1)                         0.02       0.89 f
+  iEX/iALU/shift/U4/Y (INVX1)                             0.00       0.89 r
+  iEX/iALU/shift/U5/Y (INVX1)                             0.01       0.91 f
+  iEX/iALU/shift/U285/Y (AOI22X1)                         0.03       0.94 r
+  iEX/iALU/shift/U61/Y (BUFX2)                            0.04       0.97 r
+  iEX/iALU/shift/U286/Y (OAI21X1)                         0.02       0.99 f
+  iEX/iALU/shift/U129/Y (AND2X2)                          0.03       1.02 f
+  iEX/iALU/shift/U130/Y (INVX1)                           0.00       1.02 r
+  iEX/iALU/shift/U287/Y (OAI21X1)                         0.01       1.03 f
+  iEX/iALU/shift/Out<3> (shifter)                         0.00       1.03 f
+  iEX/iALU/U440/Y (AOI22X1)                               0.03       1.06 r
+  iEX/iALU/U142/Y (AND2X2)                                0.03       1.10 r
+  iEX/iALU/U143/Y (INVX1)                                 0.02       1.11 f
+  iEX/iALU/Out<3> (alu)                                   0.00       1.11 f
+  iEX/U79/Y (BUFX2)                                       0.03       1.15 f
+  iEX/ALU_out<3> (execute)                                0.00       1.15 f
+  EMALU_out[3]/d (dff_201)                                0.00       1.15 f
+  EMALU_out[3]/U3/Y (INVX1)                               0.00       1.15 r
+  EMALU_out[3]/U4/Y (NOR2X1)                              0.01       1.15 f
+  EMALU_out[3]/state_reg/D (DFFPOSX1)                     0.00       1.15 f
+  data arrival time                                                  1.15
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMALU_out[3]/state_reg/CLK (DFFPOSX1)                   0.00       1.00 r
+  library setup time                                     -0.10       0.90
+  data required time                                                 0.90
+  --------------------------------------------------------------------------
+  data required time                                                 0.90
+  data arrival time                                                 -1.15
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.25
+
+
+  Startpoint: EMRd[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMALU_out[5]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[0]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[0]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[0]/q (dff_195)                                     0.00       0.11 f
+  frwrd/em_write_reg<0> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U39/Y (INVX1)                                     0.02       0.12 r
+  frwrd/U37/Y (XNOR2X1)                                   0.02       0.15 f
+  frwrd/U25/Y (OR2X2)                                     0.05       0.20 f
+  frwrd/U26/Y (INVX1)                                     0.00       0.19 r
+  frwrd/U3/Y (AND2X2)                                     0.03       0.22 r
+  frwrd/U18/Y (INVX1)                                     0.02       0.24 f
+  frwrd/U17/Y (NOR2X1)                                    0.03       0.27 r
+  frwrd/U15/Y (INVX1)                                     0.02       0.29 f
+  frwrd/U51/Y (NAND3X1)                                   0.03       0.32 r
+  frwrd/U24/Y (BUFX2)                                     0.03       0.36 r
+  frwrd/U52/Y (NOR2X1)                                    0.01       0.37 f
+  frwrd/frwrd_sel_B<1> (forwarding_unit)                  0.00       0.37 f
+  iEX/frwrd_sel_B<1> (execute)                            0.00       0.37 f
+  iEX/U135/Y (INVX1)                                      0.00       0.37 r
+  iEX/U145/Y (INVX1)                                      0.02       0.39 f
+  iEX/U18/Y (INVX1)                                       0.00       0.39 r
+  iEX/U147/Y (AND2X2)                                     0.04       0.43 r
+  iEX/U60/Y (AND2X2)                                      0.03       0.46 r
+  iEX/U61/Y (INVX1)                                       0.01       0.47 f
+  iEX/U23/Y (AND2X2)                                      0.03       0.51 f
+  iEX/U161/Y (NAND2X1)                                    0.01       0.52 r
+  iEX/iALU/B<0> (alu)                                     0.00       0.52 r
+  iEX/iALU/U314/Y (BUFX2)                                 0.05       0.57 r
+  iEX/iALU/U299/Y (INVX1)                                 0.03       0.60 f
+  iEX/iALU/U345/Y (OR2X2)                                 0.05       0.65 f
+  iEX/iALU/U6/Y (INVX4)                                   0.03       0.67 r
+  iEX/iALU/shift/Cnt<0> (shifter)                         0.00       0.67 r
+  iEX/iALU/shift/U124/Y (INVX8)                           0.03       0.70 f
+  iEX/iALU/shift/U260/Y (AOI22X1)                         0.04       0.74 r
+  iEX/iALU/shift/U50/Y (BUFX2)                            0.04       0.77 r
+  iEX/iALU/shift/U261/Y (OAI21X1)                         0.02       0.79 f
+  iEX/iALU/shift/U262/Y (AOI22X1)                         0.05       0.84 r
+  iEX/iALU/shift/U51/Y (BUFX2)                            0.04       0.88 r
+  iEX/iALU/shift/U263/Y (OAI21X1)                         0.02       0.90 f
+  iEX/iALU/shift/U295/Y (AOI22X1)                         0.04       0.93 r
+  iEX/iALU/shift/U65/Y (BUFX2)                            0.04       0.97 r
+  iEX/iALU/shift/U296/Y (OAI21X1)                         0.02       0.98 f
+  iEX/iALU/shift/U127/Y (AND2X2)                          0.03       1.01 f
+  iEX/iALU/shift/U128/Y (INVX1)                           0.00       1.01 r
+  iEX/iALU/shift/U297/Y (OAI21X1)                         0.01       1.02 f
+  iEX/iALU/shift/Out<5> (shifter)                         0.00       1.02 f
+  iEX/iALU/U432/Y (AOI22X1)                               0.03       1.06 r
+  iEX/iALU/U124/Y (AND2X2)                                0.04       1.09 r
+  iEX/iALU/U125/Y (INVX1)                                 0.01       1.11 f
+  iEX/iALU/Out<5> (alu)                                   0.00       1.11 f
+  iEX/U81/Y (BUFX2)                                       0.03       1.14 f
+  iEX/ALU_out<5> (execute)                                0.00       1.14 f
+  EMALU_out[5]/d (dff_203)                                0.00       1.14 f
+  EMALU_out[5]/U3/Y (INVX1)                               0.00       1.14 r
+  EMALU_out[5]/U4/Y (NOR2X1)                              0.01       1.15 f
+  EMALU_out[5]/state_reg/D (DFFPOSX1)                     0.00       1.15 f
+  data arrival time                                                  1.15
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMALU_out[5]/state_reg/CLK (DFFPOSX1)                   0.00       1.00 r
+  library setup time                                     -0.10       0.90
+  data required time                                                 0.90
+  --------------------------------------------------------------------------
+  data required time                                                 0.90
+  data arrival time                                                 -1.15
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.24
+
+
+  Startpoint: EMRd[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMALU_out[4]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[0]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[0]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[0]/q (dff_195)                                     0.00       0.11 f
+  frwrd/em_write_reg<0> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U39/Y (INVX1)                                     0.02       0.12 r
+  frwrd/U37/Y (XNOR2X1)                                   0.02       0.15 f
+  frwrd/U25/Y (OR2X2)                                     0.05       0.20 f
+  frwrd/U26/Y (INVX1)                                     0.00       0.19 r
+  frwrd/U3/Y (AND2X2)                                     0.03       0.22 r
+  frwrd/U18/Y (INVX1)                                     0.02       0.24 f
+  frwrd/U17/Y (NOR2X1)                                    0.03       0.27 r
+  frwrd/U15/Y (INVX1)                                     0.02       0.29 f
+  frwrd/U51/Y (NAND3X1)                                   0.03       0.32 r
+  frwrd/U24/Y (BUFX2)                                     0.03       0.36 r
+  frwrd/U52/Y (NOR2X1)                                    0.01       0.37 f
+  frwrd/frwrd_sel_B<1> (forwarding_unit)                  0.00       0.37 f
+  iEX/frwrd_sel_B<1> (execute)                            0.00       0.37 f
+  iEX/U135/Y (INVX1)                                      0.00       0.37 r
+  iEX/U145/Y (INVX1)                                      0.02       0.39 f
+  iEX/U17/Y (AND2X2)                                      0.04       0.43 f
+  iEX/U202/Y (AOI22X1)                                    0.02       0.45 r
+  iEX/U23/Y (AND2X2)                                      0.03       0.49 r
+  iEX/U161/Y (NAND2X1)                                    0.01       0.50 f
+  iEX/iALU/B<0> (alu)                                     0.00       0.50 f
+  iEX/iALU/U314/Y (BUFX2)                                 0.05       0.55 f
+  iEX/iALU/U299/Y (INVX1)                                 0.01       0.56 r
+  iEX/iALU/U345/Y (OR2X2)                                 0.05       0.60 r
+  iEX/iALU/U6/Y (INVX4)                                   0.03       0.63 f
+  iEX/iALU/shift/Cnt<0> (shifter)                         0.00       0.63 f
+  iEX/iALU/shift/U165/Y (AND2X2)                          0.04       0.67 f
+  iEX/iALU/shift/U166/Y (INVX8)                           0.03       0.70 r
+  iEX/iALU/shift/U164/Y (INVX2)                           0.03       0.73 f
+  iEX/iALU/shift/U227/Y (AOI22X1)                         0.03       0.75 r
+  iEX/iALU/shift/U35/Y (BUFX2)                            0.04       0.79 r
+  iEX/iALU/shift/U228/Y (OAI21X1)                         0.02       0.81 f
+  iEX/iALU/shift/U234/Y (AOI22X1)                         0.03       0.84 r
+  iEX/iALU/shift/U38/Y (BUFX2)                            0.04       0.87 r
+  iEX/iALU/shift/U235/Y (OAI21X1)                         0.02       0.89 f
+  iEX/iALU/shift/U290/Y (AOI22X1)                         0.04       0.93 r
+  iEX/iALU/shift/U63/Y (BUFX2)                            0.04       0.97 r
+  iEX/iALU/shift/U291/Y (OAI21X1)                         0.02       0.98 f
+  iEX/iALU/shift/U147/Y (AND2X2)                          0.03       1.02 f
+  iEX/iALU/shift/U148/Y (INVX1)                           0.00       1.01 r
+  iEX/iALU/shift/U292/Y (OAI21X1)                         0.01       1.03 f
+  iEX/iALU/shift/Out<4> (shifter)                         0.00       1.03 f
+  iEX/iALU/U436/Y (AOI22X1)                               0.03       1.06 r
+  iEX/iALU/U127/Y (AND2X2)                                0.04       1.09 r
+  iEX/iALU/U128/Y (INVX1)                                 0.01       1.11 f
+  iEX/iALU/Out<4> (alu)                                   0.00       1.11 f
+  iEX/U76/Y (BUFX2)                                       0.03       1.14 f
+  iEX/ALU_out<4> (execute)                                0.00       1.14 f
+  EMALU_out[4]/d (dff_202)                                0.00       1.14 f
+  EMALU_out[4]/U3/Y (INVX1)                               0.00       1.14 r
+  EMALU_out[4]/U4/Y (NOR2X1)                              0.01       1.15 f
+  EMALU_out[4]/state_reg/D (DFFPOSX1)                     0.00       1.15 f
+  data arrival time                                                  1.15
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMALU_out[4]/state_reg/CLK (DFFPOSX1)                   0.00       1.00 r
+  library setup time                                     -0.10       0.90
+  data required time                                                 0.90
+  --------------------------------------------------------------------------
+  data required time                                                 0.90
+  data arrival time                                                 -1.15
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.24
+
+
+  Startpoint: EMRd[1]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMPC_out[15]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[1]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[1]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[1]/q (dff_196)                                     0.00       0.11 f
+  frwrd/em_write_reg<1> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U9/Y (XNOR2X1)                                    0.05       0.16 r
+  frwrd/U22/Y (OR2X2)                                     0.05       0.20 r
+  frwrd/U23/Y (INVX1)                                     0.02       0.22 f
+  frwrd/U27/Y (AND2X2)                                    0.04       0.26 f
+  frwrd/U28/Y (INVX1)                                     0.00       0.25 r
+  frwrd/U38/Y (AND2X2)                                    0.04       0.30 r
+  frwrd/frwrd_sel_A<1> (forwarding_unit)                  0.00       0.30 r
+  iEX/frwrd_sel_A<1> (execute)                            0.00       0.30 r
+  iEX/U27/Y (BUFX4)                                       0.03       0.32 r
+  iEX/U256/Y (OAI21X1)                                    0.02       0.35 f
+  iEX/iALU/A<2> (alu)                                     0.00       0.35 f
+  iEX/iALU/U48/Y (INVX1)                                  0.00       0.35 r
+  iEX/iALU/neg_adder/A<2> (cla16_1)                       0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/A<2> (cla4_7)                 0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/U1/Y (INVX1)                  0.01       0.36 f
+  iEX/iALU/neg_adder/cla4_1/U6/Y (AND2X2)                 0.03       0.40 f
+  iEX/iALU/neg_adder/cla4_1/U66/Y (OAI21X1)               0.04       0.43 r
+  iEX/iALU/neg_adder/cla4_1/U12/Y (AND2X2)                0.03       0.46 r
+  iEX/iALU/neg_adder/cla4_1/U13/Y (INVX1)                 0.02       0.48 f
+  iEX/iALU/neg_adder/cla4_1/U33/Y (NOR2X1)                0.03       0.51 r
+  iEX/iALU/neg_adder/cla4_1/Cout (cla4_7)                 0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/Cin (cla4_6)                  0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/U24/Y (BUFX2)                 0.04       0.54 r
+  iEX/iALU/neg_adder/cla4_2/U85/Y (INVX1)                 0.02       0.56 f
+  iEX/iALU/neg_adder/cla4_2/U90/Y (AOI22X1)               0.04       0.60 r
+  iEX/iALU/neg_adder/cla4_2/U30/Y (BUFX2)                 0.04       0.64 r
+  iEX/iALU/neg_adder/cla4_2/Cout (cla4_6)                 0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/Cin (cla4_5)                  0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/U80/Y (NAND3X1)               0.01       0.65 f
+  iEX/iALU/neg_adder/cla4_3/U17/Y (BUFX2)                 0.03       0.69 f
+  iEX/iALU/neg_adder/cla4_3/U81/Y (NAND3X1)               0.03       0.71 r
+  iEX/iALU/neg_adder/cla4_3/S<2> (cla4_5)                 0.00       0.71 r
+  iEX/iALU/neg_adder/U3/Y (BUFX2)                         0.03       0.75 r
+  iEX/iALU/neg_adder/S<10> (cla16_1)                      0.00       0.75 r
+  iEX/iALU/U68/Y (AND2X2)                                 0.03       0.78 r
+  iEX/iALU/U69/Y (INVX1)                                  0.01       0.79 f
+  iEX/iALU/U388/Y (OAI21X1)                               0.03       0.82 r
+  iEX/iALU/adder/A<10> (cla16_0)                          0.00       0.82 r
+  iEX/iALU/adder/cla4_3/A<2> (cla4_1)                     0.00       0.82 r
+  iEX/iALU/adder/cla4_3/U67/Y (AOI21X1)                   0.02       0.84 f
+  iEX/iALU/adder/cla4_3/U24/Y (BUFX2)                     0.03       0.88 f
+  iEX/iALU/adder/cla4_3/U68/Y (AOI21X1)                   0.03       0.91 r
+  iEX/iALU/adder/cla4_3/U39/Y (BUFX2)                     0.04       0.95 r
+  iEX/iALU/adder/cla4_3/U25/Y (AND2X2)                    0.03       0.98 r
+  iEX/iALU/adder/cla4_3/U26/Y (INVX1)                     0.02       0.99 f
+  iEX/iALU/adder/cla4_3/U71/Y (OAI21X1)                   0.04       1.04 r
+  iEX/iALU/adder/cla4_3/Cout (cla4_1)                     0.00       1.04 r
+  iEX/iALU/adder/cla4_4/Cin (cla4_0)                      0.00       1.04 r
+  iEX/iALU/adder/cla4_4/U1/Y (INVX2)                      0.02       1.06 f
+  iEX/iALU/adder/cla4_4/U25/Y (INVX1)                     0.01       1.07 r
+  iEX/iALU/adder/cla4_4/U8/Y (INVX1)                      0.02       1.09 f
+  iEX/iALU/adder/cla4_4/U95/Y (OAI21X1)                   0.06       1.15 r
+  iEX/iALU/adder/cla4_4/U66/Y (XNOR2X1)                   0.04       1.19 f
+  iEX/iALU/adder/cla4_4/S<3> (cla4_0)                     0.00       1.19 f
+  iEX/iALU/adder/S<15> (cla16_0)                          0.00       1.19 f
+  iEX/iALU/U309/Y (BUFX2)                                 0.03       1.22 f
+  iEX/iALU/U19/Y (AND2X2)                                 0.04       1.26 f
+  iEX/iALU/U38/Y (OR2X2)                                  0.04       1.29 f
+  iEX/iALU/U32/Y (OR2X2)                                  0.05       1.34 f
+  iEX/iALU/Out<15> (alu)                                  0.00       1.34 f
+  iEX/U330/Y (AOI22X1)                                    0.03       1.38 r
+  iEX/U92/Y (INVX1)                                       0.02       1.40 f
+  iEX/U93/Y (INVX1)                                       0.00       1.40 r
+  iEX/U332/Y (NAND2X1)                                    0.01       1.41 f
+  iEX/PC_out<15> (execute)                                0.00       1.41 f
+  EMPC_out[15]/d (dff_245)                                0.00       1.41 f
+  EMPC_out[15]/U3/Y (INVX1)                               0.00       1.41 r
+  EMPC_out[15]/U4/Y (NOR2X1)                              0.01       1.42 f
+  EMPC_out[15]/state_reg/D (DFFPOSX1)                     0.00       1.42 f
+  data arrival time                                                  1.42
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMPC_out[15]/state_reg/CLK (DFFPOSX1)                   0.00       1.00 r
+  library setup time                                      0.21       1.21
+  data required time                                                 1.21
+  --------------------------------------------------------------------------
+  data required time                                                 1.21
+  data arrival time                                                 -1.42
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.20
+
+
+  Startpoint: iFET/PC_reg/register_instance[1]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: iFET/PC_reg/register_instance[15]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  iFET/PC_reg/register_instance[1]/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  iFET/PC_reg/register_instance[1]/state_reg/Q (DFFPOSX1)
+                                                          0.14       0.14 f
+  iFET/PC_reg/register_instance[1]/q (dff_129)            0.00       0.14 f
+  iFET/PC_reg/q<1> (register_8)                           0.00       0.14 f
+  iFET/PC_adder/A<1> (cla16_4)                            0.00       0.14 f
+  iFET/PC_adder/cla4_1/A<1> (cla4_19)                     0.00       0.14 f
+  iFET/PC_adder/cla4_1/U1/Y (AND2X1)                      0.05       0.19 f
+  iFET/PC_adder/cla4_1/U4/Y (INVX1)                       0.01       0.20 r
+  iFET/PC_adder/cla4_1/U25/Y (NAND3X1)                    0.02       0.21 f
+  iFET/PC_adder/cla4_1/U2/Y (BUFX2)                       0.03       0.24 f
+  iFET/PC_adder/cla4_1/U26/Y (NAND3X1)                    0.03       0.27 r
+  iFET/PC_adder/cla4_1/U13/Y (INVX1)                      0.02       0.29 f
+  iFET/PC_adder/cla4_1/U12/Y (AOI21X1)                    0.02       0.31 r
+  iFET/PC_adder/cla4_1/U3/Y (INVX2)                       0.03       0.34 f
+  iFET/PC_adder/cla4_1/Cout (cla4_19)                     0.00       0.34 f
+  iFET/PC_adder/cla4_2/Cin (cla4_18)                      0.00       0.34 f
+  iFET/PC_adder/cla4_2/U25/Y (OAI21X1)                    0.02       0.37 r
+  iFET/PC_adder/cla4_2/U24/Y (INVX1)                      0.02       0.39 f
+  iFET/PC_adder/cla4_2/U27/Y (AOI21X1)                    0.03       0.42 r
+  iFET/PC_adder/cla4_2/U6/Y (BUFX2)                       0.03       0.46 r
+  iFET/PC_adder/cla4_2/U29/Y (AOI22X1)                    0.01       0.47 f
+  iFET/PC_adder/cla4_2/U13/Y (INVX1)                      0.01       0.48 r
+  iFET/PC_adder/cla4_2/U14/Y (INVX1)                      0.01       0.49 f
+  iFET/PC_adder/cla4_2/U30/Y (OAI21X1)                    0.02       0.51 r
+  iFET/PC_adder/cla4_2/U31/Y (OAI21X1)                    0.03       0.54 f
+  iFET/PC_adder/cla4_2/Cout (cla4_18)                     0.00       0.54 f
+  iFET/PC_adder/cla4_3/Cin (cla4_17)                      0.00       0.54 f
+  iFET/PC_adder/cla4_3/U23/Y (OAI21X1)                    0.03       0.57 r
+  iFET/PC_adder/cla4_3/U22/Y (INVX1)                      0.02       0.59 f
+  iFET/PC_adder/cla4_3/U26/Y (AOI21X1)                    0.03       0.63 r
+  iFET/PC_adder/cla4_3/U3/Y (BUFX2)                       0.03       0.66 r
+  iFET/PC_adder/cla4_3/U28/Y (AOI22X1)                    0.01       0.68 f
+  iFET/PC_adder/cla4_3/U10/Y (INVX1)                      0.01       0.69 r
+  iFET/PC_adder/cla4_3/U12/Y (INVX1)                      0.01       0.70 f
+  iFET/PC_adder/cla4_3/U29/Y (OAI21X1)                    0.02       0.72 r
+  iFET/PC_adder/cla4_3/U30/Y (OAI21X1)                    0.03       0.75 f
+  iFET/PC_adder/cla4_3/Cout (cla4_17)                     0.00       0.75 f
+  iFET/PC_adder/cla4_4/Cin (cla4_16)                      0.00       0.75 f
+  iFET/PC_adder/cla4_4/U19/Y (NAND3X1)                    0.04       0.79 r
+  iFET/PC_adder/cla4_4/U3/Y (BUFX2)                       0.04       0.82 r
+  iFET/PC_adder/cla4_4/U22/Y (NAND3X1)                    0.01       0.83 f
+  iFET/PC_adder/cla4_4/U9/Y (INVX1)                       0.01       0.84 r
+  iFET/PC_adder/cla4_4/U10/Y (INVX1)                      0.01       0.85 f
+  iFET/PC_adder/cla4_4/U23/Y (AOI21X1)                    0.02       0.87 r
+  iFET/PC_adder/cla4_4/U24/Y (AOI21X1)                    0.03       0.90 f
+  iFET/PC_adder/cla4_4/U31/YS (FAX1)                      0.08       0.98 f
+  iFET/PC_adder/cla4_4/S<3> (cla4_16)                     0.00       0.98 f
+  iFET/PC_adder/S<15> (cla16_4)                           0.00       0.98 f
+  iFET/PC_inc<15> (fetch)                                 0.00       0.98 f
+  hazard_unit/PC_inc<15> (hdu)                            0.00       0.98 f
+  hazard_unit/U84/Y (AND2X1)                              0.03       1.01 f
+  hazard_unit/U85/Y (INVX1)                               0.00       1.02 r
+  hazard_unit/U107/Y (NAND3X1)                            0.01       1.02 f
+  hazard_unit/PC_next<15> (hdu)                           0.00       1.02 f
+  iFET/PC_next<15> (fetch)                                0.00       1.02 f
+  iFET/PC_reg/d<15> (register_8)                          0.00       1.02 f
+  iFET/PC_reg/U3/Y (BUFX2)                                0.03       1.06 f
+  iFET/PC_reg/U30/Y (MUX2X1)                              0.03       1.09 r
+  iFET/PC_reg/U6/Y (INVX1)                                0.02       1.11 f
+  iFET/PC_reg/register_instance[15]/d (dff_143)           0.00       1.11 f
+  iFET/PC_reg/register_instance[15]/U3/Y (INVX1)          0.00       1.11 r
+  iFET/PC_reg/register_instance[15]/U4/Y (NOR2X1)         0.01       1.12 f
+  iFET/PC_reg/register_instance[15]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.12 f
+  data arrival time                                                  1.12
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  iFET/PC_reg/register_instance[15]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.12
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.18
+
+
+  Startpoint: EMRd[1]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EMALU_out[15]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EMRd[1]/state_reg/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  EMRd[1]/state_reg/Q (DFFPOSX1)                          0.11       0.11 f
+  EMRd[1]/q (dff_196)                                     0.00       0.11 f
+  frwrd/em_write_reg<1> (forwarding_unit)                 0.00       0.11 f
+  frwrd/U9/Y (XNOR2X1)                                    0.05       0.16 r
+  frwrd/U22/Y (OR2X2)                                     0.05       0.20 r
+  frwrd/U23/Y (INVX1)                                     0.02       0.22 f
+  frwrd/U27/Y (AND2X2)                                    0.04       0.26 f
+  frwrd/U28/Y (INVX1)                                     0.00       0.25 r
+  frwrd/U38/Y (AND2X2)                                    0.04       0.30 r
+  frwrd/frwrd_sel_A<1> (forwarding_unit)                  0.00       0.30 r
+  iEX/frwrd_sel_A<1> (execute)                            0.00       0.30 r
+  iEX/U27/Y (BUFX4)                                       0.03       0.32 r
+  iEX/U256/Y (OAI21X1)                                    0.02       0.35 f
+  iEX/iALU/A<2> (alu)                                     0.00       0.35 f
+  iEX/iALU/U48/Y (INVX1)                                  0.00       0.35 r
+  iEX/iALU/neg_adder/A<2> (cla16_1)                       0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/A<2> (cla4_7)                 0.00       0.35 r
+  iEX/iALU/neg_adder/cla4_1/U1/Y (INVX1)                  0.01       0.36 f
+  iEX/iALU/neg_adder/cla4_1/U6/Y (AND2X2)                 0.03       0.40 f
+  iEX/iALU/neg_adder/cla4_1/U66/Y (OAI21X1)               0.04       0.43 r
+  iEX/iALU/neg_adder/cla4_1/U12/Y (AND2X2)                0.03       0.46 r
+  iEX/iALU/neg_adder/cla4_1/U13/Y (INVX1)                 0.02       0.48 f
+  iEX/iALU/neg_adder/cla4_1/U33/Y (NOR2X1)                0.03       0.51 r
+  iEX/iALU/neg_adder/cla4_1/Cout (cla4_7)                 0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/Cin (cla4_6)                  0.00       0.51 r
+  iEX/iALU/neg_adder/cla4_2/U24/Y (BUFX2)                 0.04       0.54 r
+  iEX/iALU/neg_adder/cla4_2/U85/Y (INVX1)                 0.02       0.56 f
+  iEX/iALU/neg_adder/cla4_2/U90/Y (AOI22X1)               0.04       0.60 r
+  iEX/iALU/neg_adder/cla4_2/U30/Y (BUFX2)                 0.04       0.64 r
+  iEX/iALU/neg_adder/cla4_2/Cout (cla4_6)                 0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/Cin (cla4_5)                  0.00       0.64 r
+  iEX/iALU/neg_adder/cla4_3/U80/Y (NAND3X1)               0.01       0.65 f
+  iEX/iALU/neg_adder/cla4_3/U17/Y (BUFX2)                 0.03       0.69 f
+  iEX/iALU/neg_adder/cla4_3/U81/Y (NAND3X1)               0.03       0.71 r
+  iEX/iALU/neg_adder/cla4_3/S<2> (cla4_5)                 0.00       0.71 r
+  iEX/iALU/neg_adder/U3/Y (BUFX2)                         0.03       0.75 r
+  iEX/iALU/neg_adder/S<10> (cla16_1)                      0.00       0.75 r
+  iEX/iALU/U68/Y (AND2X2)                                 0.03       0.78 r
+  iEX/iALU/U69/Y (INVX1)                                  0.01       0.79 f
+  iEX/iALU/U388/Y (OAI21X1)                               0.03       0.82 r
+  iEX/iALU/adder/A<10> (cla16_0)                          0.00       0.82 r
+  iEX/iALU/adder/cla4_3/A<2> (cla4_1)                     0.00       0.82 r
+  iEX/iALU/adder/cla4_3/U67/Y (AOI21X1)                   0.02       0.84 f
+  iEX/iALU/adder/cla4_3/U24/Y (BUFX2)                     0.03       0.88 f
+  iEX/iALU/adder/cla4_3/U68/Y (AOI21X1)                   0.03       0.91 r
+  iEX/iALU/adder/cla4_3/U39/Y (BUFX2)                     0.04       0.95 r
+  iEX/iALU/adder/cla4_3/U25/Y (AND2X2)                    0.03       0.98 r
+  iEX/iALU/adder/cla4_3/U26/Y (INVX1)                     0.02       0.99 f
+  iEX/iALU/adder/cla4_3/U71/Y (OAI21X1)                   0.04       1.04 r
+  iEX/iALU/adder/cla4_3/Cout (cla4_1)                     0.00       1.04 r
+  iEX/iALU/adder/cla4_4/Cin (cla4_0)                      0.00       1.04 r
+  iEX/iALU/adder/cla4_4/U1/Y (INVX2)                      0.02       1.06 f
+  iEX/iALU/adder/cla4_4/U25/Y (INVX1)                     0.01       1.07 r
+  iEX/iALU/adder/cla4_4/U8/Y (INVX1)                      0.02       1.09 f
+  iEX/iALU/adder/cla4_4/U95/Y (OAI21X1)                   0.06       1.15 r
+  iEX/iALU/adder/cla4_4/U66/Y (XNOR2X1)                   0.04       1.19 f
+  iEX/iALU/adder/cla4_4/S<3> (cla4_0)                     0.00       1.19 f
+  iEX/iALU/adder/S<15> (cla16_0)                          0.00       1.19 f
+  iEX/iALU/U309/Y (BUFX2)                                 0.03       1.22 f
+  iEX/iALU/U19/Y (AND2X2)                                 0.04       1.26 f
+  iEX/iALU/U38/Y (OR2X2)                                  0.04       1.29 f
+  iEX/iALU/U32/Y (OR2X2)                                  0.05       1.34 f
+  iEX/iALU/Out<15> (alu)                                  0.00       1.34 f
+  iEX/U199/Y (INVX1)                                      0.00       1.34 r
+  iEX/U200/Y (INVX1)                                      0.01       1.35 f
+  iEX/ALU_out<15> (execute)                               0.00       1.35 f
+  EMALU_out[15]/d (dff_213)                               0.00       1.35 f
+  EMALU_out[15]/U3/Y (INVX1)                              0.00       1.36 r
+  EMALU_out[15]/U4/Y (NOR2X1)                             0.01       1.36 f
+  EMALU_out[15]/state_reg/D (DFFPOSX1)                    0.00       1.36 f
+  data arrival time                                                  1.36
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EMALU_out[15]/state_reg/CLK (DFFPOSX1)                  0.00       1.00 r
+  library setup time                                      0.21       1.21
+  data required time                                                 1.21
+  --------------------------------------------------------------------------
+  data required time                                                 1.21
+  data arrival time                                                 -1.36
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.15
+
+
+1
