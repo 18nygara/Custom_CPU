@@ -1,0 +1,2 @@
+/u/a/n/anygard/private/ece552/project/demo2/verification/mytests/branch_stall_test.asm SUCCESS CPI:5.3 CYCLES:48 ICOUNT:9 IHITRATE: 0 DHITRATE: 0
+/u/a/n/anygard/private/ece552/project/demo2/verification/mytests/forwarding_test.asm SUCCESS CPI:2.5 CYCLES:25 ICOUNT:10 IHITRATE: 0 DHITRATE: 0

@@ -1,0 +1,8 @@
+/u/k/a/karu/courses/cs552/fall2020/handouts/testprograms/public/rand_ctrl/t_1_ctrl.asm SUCCESS CPI:1.7 CYCLES:1237 ICOUNT:748 IHITRATE: 100.0 DHITRATE: 100.0
+/u/k/a/karu/courses/cs552/fall2020/handouts/testprograms/public/rand_ctrl/t_2_ctrl.asm SUCCESS CPI:1.6 CYCLES:1408 ICOUNT:896 IHITRATE: 100.0 DHITRATE: 100.0
+/u/k/a/karu/courses/cs552/fall2020/handouts/testprograms/public/rand_ctrl/t_3_ctrl.asm SUCCESS CPI:1.6 CYCLES:1420 ICOUNT:889 IHITRATE: 100.0 DHITRATE: 100.0
+/u/k/a/karu/courses/cs552/fall2020/handouts/testprograms/public/rand_ctrl/t_4_ctrl.asm SUCCESS CPI:1.8 CYCLES:1086 ICOUNT:598 IHITRATE: 100.0 DHITRATE: 100.0
+/u/k/a/karu/courses/cs552/fall2020/handouts/testprograms/public/rand_ctrl/t_5_ctrl.asm SUCCESS CPI:1.6 CYCLES:1391 ICOUNT:875 IHITRATE: 100.0 DHITRATE: 100.0
+/u/k/a/karu/courses/cs552/fall2020/handouts/testprograms/public/rand_ctrl/t_6_ctrl.asm SUCCESS CPI:1.6 CYCLES:1363 ICOUNT:841 IHITRATE: 100.0 DHITRATE: 100.0
+/u/k/a/karu/courses/cs552/fall2020/handouts/testprograms/public/rand_ctrl/t_7_ctrl.asm SUCCESS CPI:1.6 CYCLES:1436 ICOUNT:914 IHITRATE: 100.0 DHITRATE: 100.0
+/u/k/a/karu/courses/cs552/fall2020/handouts/testprograms/public/rand_ctrl/t_8_ctrl.asm SUCCESS CPI:1.8 CYCLES:1122 ICOUNT:631 IHITRATE: 100.0 DHITRATE: 100.0
